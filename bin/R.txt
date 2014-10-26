@@ -282,6 +282,7 @@ int dimen dialog_fixed_width_major 0x7f07000c
 int dimen dialog_fixed_width_minor 0x7f07000d
 int dimen disabled_alpha_material_dark 0x7f070001
 int dimen disabled_alpha_material_light 0x7f070000
+int dimen textsize3 0x7f07002d
 int drawable abc_ab_share_pack_holo_dark 0x7f020000
 int drawable abc_ab_share_pack_holo_light 0x7f020001
 int drawable abc_btn_check_material 0x7f020002
