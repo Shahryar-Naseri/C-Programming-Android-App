@@ -1,36 +1,67 @@
 package net.csarchive.cprogramming;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class MainMenu extends ActionBarActivity {
+public class MainMenu extends Activity implements View.OnClickListener{
+	
+	Button btnProgramsList, btnViewAll, btnSaveAll, btnContact, btnAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+        btnProgramsList = (Button) findViewById(R.id.btnProgramsList);
+        btnContact = (Button) findViewById(R.id.btnContact);
+        btnViewAll = (Button) findViewById(R.id.btnViewAll);
+        btnSaveAll = (Button) findViewById(R.id.btnSaveAll);
+        btnAbout = (Button) findViewById(R.id.btnAbout);
+        btnProgramsList.setOnClickListener(this);
+        btnViewAll.setOnClickListener(this);
+        btnContact.setOnClickListener(this);  
+        btnSaveAll.setOnClickListener(this);
+        btnAbout.setOnClickListener(this);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+	@Override
+	public void onClick(View v) {
+		// Defining onClickListener to open each activity using Intent.
+		if(v.getId() == R.id.btnProgramsList){
+			Intent c = new Intent("com.example.cprogramsdemo.Menu");
+			startActivity(c);
+		}
+		else if(v.getId() == R.id.btnViewAll){
+			Intent i = new Intent("com.example.cprogramsdemo.All");
+			startActivity(i);
+		}
+		else if(v.getId() == R.id.btnSaveAll){
+			Intent i = new Intent("com.example.cprogramsdemo.Save");
+			startActivity(i);
+		}
+		else if(v.getId() == R.id.btnContact){
+			Intent i = new Intent("com.example.cprogramsdemo.Contact");
+			startActivity(i);
+		}
+		else{
+			Intent i = new Intent("com.example.cprogramsdemo.About");
+			startActivity(i);
+		}
+	}
+	
+	// Create a dialog to confirm user
+	public void onBackPressed(){
+		new AlertDialog.Builder(this).setMessage("Are you want to exit?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				MainMenu.this.finish();
+			}
+		}).setNegativeButton("No", null).show();
+	}
 }
