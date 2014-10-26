@@ -1,16 +1,59 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#198CFF"
     tools:context="net.csarchive.cprogramming.MainMenu" >
-
-    <TextView
-        android:layout_width="wrap_content"
+    
+    <Button
+        android:id="@+id/btnProgramsList"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/btnProgramsList" />
+
+    <Button
+        android:id="@+id/btnViewAll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnProgramsList"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/btnViewAll" />
+    
+    <Button
+        android:id="@+id/btnSaveAll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewAll"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/btnSaveAll" />
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSaveAll"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/btnContact" />
+    
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnContact"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/btnAbout" />
 
 </RelativeLayout>
