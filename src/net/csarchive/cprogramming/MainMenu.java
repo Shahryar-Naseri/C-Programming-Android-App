@@ -33,23 +33,23 @@ public class MainMenu extends Activity implements View.OnClickListener{
 	public void onClick(View v) {
 		// Defining onClickListener to open each activity using Intent.
 		if(v.getId() == R.id.btnProgramsList){
-			Intent c = new Intent("com.example.cprogramsdemo.Menu");
+			Intent c = new Intent("net.csarchive.cprogramming.Menu");
 			startActivity(c);
 		}
 		else if(v.getId() == R.id.btnViewAll){
-			Intent i = new Intent("com.example.cprogramsdemo.All");
+			Intent i = new Intent("net.csarchive.cprogramming.All");
 			startActivity(i);
 		}
 		else if(v.getId() == R.id.btnSaveAll){
-			Intent i = new Intent("com.example.cprogramsdemo.Save");
+			Intent i = new Intent("net.csarchive.cprogramming.Save");
 			startActivity(i);
 		}
 		else if(v.getId() == R.id.btnContact){
-			Intent i = new Intent("com.example.cprogramsdemo.Contact");
+			Intent i = new Intent("net.csarchive.cprogramming.Contact");
 			startActivity(i);
 		}
 		else{
-			Intent i = new Intent("com.example.cprogramsdemo.About");
+			Intent i = new Intent("net.csarchive.cprogramming.About");
 			startActivity(i);
 		}
 	}

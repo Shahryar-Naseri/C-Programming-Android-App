@@ -29,7 +29,7 @@
             android:name=".MainMenu"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MainMenu" />
+                <action android:name="net.csarchive.cprogramming.MainMenu" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -38,7 +38,7 @@
             android:name=".Menu"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Menu" />
+                <action android:name="net.csarchive.cprogramming.Menu" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -47,7 +47,7 @@
             android:name=".Save"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Save" />
+                <action android:name="net.csarchive.cprogramming.Save" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -56,7 +56,7 @@
             android:name=".Contact"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Contact" />
+                <action android:name="net.csarchive.cprogramming.Contact" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -65,7 +65,7 @@
             android:name=".About"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.About" />
+                <action android:name="net.csarchive.cprogramming.About" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -74,7 +74,7 @@
             android:name=".All"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.All" />
+                <action android:name="net.csarchive.cprogramming.All" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
