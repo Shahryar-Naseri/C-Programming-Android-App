@@ -53,6 +53,86 @@
             android:name=".AllPrograms"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".Array"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ArrayPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Function"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".FunctionPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LibraryFns"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LibraryFnsPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LinkedList"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LinkedListPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Loop"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LoopPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Pointer"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".PointerPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".PString"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".PStringPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Recursion"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".RecursionPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Structure"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".StructurePrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Switch"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SwitchPrograms"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
