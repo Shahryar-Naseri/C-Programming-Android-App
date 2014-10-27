@@ -81,6 +81,7 @@
         </activity>
         <activity
             android:name=".AllPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -89,6 +90,7 @@
         </activity>
         <activity
             android:name=".ArrayPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -97,6 +99,7 @@
         </activity>
         <activity
             android:name=".FunctionPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -105,6 +108,7 @@
         </activity>
         <activity
             android:name=".LibraryFnsPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -113,6 +117,7 @@
         </activity>
         <activity
             android:name=".LinkedListPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -121,6 +126,7 @@
         </activity>
         <activity
             android:name=".LoopPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -129,6 +135,7 @@
         </activity>
         <activity
             android:name=".PointerPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -137,6 +144,7 @@
         </activity>
         <activity
             android:name=".PStringPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -145,6 +153,7 @@
         </activity>
         <activity
             android:name=".RecursionPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -153,6 +162,7 @@
         </activity>
         <activity
             android:name=".StructurePrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -161,6 +171,7 @@
         </activity>
         <activity
             android:name=".SwitchPrograms"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
     </application>

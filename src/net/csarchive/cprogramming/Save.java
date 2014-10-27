@@ -35,7 +35,7 @@ public class Save extends Activity implements View.OnClickListener{
 	    myNewFolder.mkdir();
 		String[] files = null;
 		try {
-			files = am.list("All Programs");
+			files = am.list("All");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -43,7 +43,7 @@ public class Save extends Activity implements View.OnClickListener{
 			InputStream is = null;
 			OutputStream os = null;
 			try {
-				is = am.open("All Programs/" + fileName);
+				is = am.open("All/" + fileName);
 				os = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/C Programs/" + fileName);
 				copyFiles(is, os);
 				is.close();
