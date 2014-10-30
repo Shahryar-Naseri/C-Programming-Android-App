@@ -7,16 +7,34 @@
     android:background="#198CFF"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tvMenuList"
+    
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:layout_marginBottom="5dp"
+    	android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnMainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:layout_marginBottom="5dp"
-        android:text="@string/tvList"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:layout_marginRight="2dp"
+        android:text="@string/btnMainMenu" />
+
+    <Button
+        android:id="@+id/btnViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:text="@string/btnViewAll" />
+    
+    </LinearLayout>
 
     <ListView
         android:id="@android:id/list"

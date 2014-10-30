@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class MainMenu extends Activity implements View.OnClickListener{
 	
+
 	Button btnProgramsList, btnViewAll, btnSaveAll, btnContact, btnAbout;
 
     @Override

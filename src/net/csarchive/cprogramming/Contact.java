@@ -73,5 +73,5 @@ public class Contact extends Activity implements View.OnClickListener{
 	public void onStop() {
 	    super.onStop();
 	    if (!isInFocus) finish();
-	}
+	} 
 }

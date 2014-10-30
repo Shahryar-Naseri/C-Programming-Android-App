@@ -152,5 +152,5 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 		else{
 			fontColor();
 		}
-	}
+	} 
 }

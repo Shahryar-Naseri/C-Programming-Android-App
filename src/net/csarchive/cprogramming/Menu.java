@@ -5,19 +5,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
-public class Menu extends ListActivity{
+public class Menu extends ListActivity implements View.OnClickListener{
 	
 	String[] chapters = {"All", "Array", "Function", "Library Functions", "Linked List", "Loop", "Pointer",  
 			"Recursion", "Structure", "Switch", "String"};
 	ListView l;
+	Button btnMainMenu, btnViewAll;
+	String TAG;
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
+		btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
+		btnViewAll = (Button) findViewById(R.id.btnViewAll);
+		btnMainMenu.setOnClickListener(this);
+		btnViewAll.setOnClickListener(this);
 		l = getListView();
 		l.setAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_expandable_list_item_1, chapters));
 	}
@@ -76,4 +83,16 @@ public class Menu extends ListActivity{
 		}
 	}
 
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if(v.getId() == R.id.btnMainMenu){
+			Intent i = new Intent("net.csarchive.cprogramming.MainMenu");
+			startActivity(i);
+		}
+		else{
+			Intent i = new Intent("net.csarchive.cprogramming.All");
+			startActivity(i);
+		}
+	}
 }

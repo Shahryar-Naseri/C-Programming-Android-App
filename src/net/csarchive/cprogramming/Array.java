@@ -11,19 +11,25 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class Array extends ListActivity{
+public class Array extends ListActivity implements View.OnClickListener{
 	
 	String[] items;
 	ListView l;
 	EditText etSearch;
+	Button btnProgramsList, btnMainMenu;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list);
+		btnProgramsList = (Button) findViewById(R.id.btnProgramsList);
+		btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
+		btnProgramsList.setOnClickListener(this);
+		btnMainMenu.setOnClickListener(this);
 		getFileList();
 		l = getListView();
 		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Array.this, android.R.layout.simple_list_item_1, items);
@@ -78,5 +84,17 @@ public class Array extends ListActivity{
 		startActivity(i);
 	}
 
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if(v.getId() == R.id.btnMainMenu){
+			Intent i = new Intent("net.csarchive.cprogramming.MainMenu");
+			startActivity(i);
+		}
+		else{
+			Intent i = new Intent("net.csarchive.cprogramming.Menu");
+			startActivity(i);
+		}
+	}
 }
 

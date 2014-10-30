@@ -152,5 +152,5 @@ public class ArrayPrograms extends Activity implements View.OnClickListener{
 		else{
 			fontColor();
 		}
-	}
+	} 
 }

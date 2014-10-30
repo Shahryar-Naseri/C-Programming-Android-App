@@ -152,5 +152,5 @@ public class FunctionPrograms extends Activity implements View.OnClickListener{
 		else{
 			fontColor();
 		}
-	}
+	} 
 }
