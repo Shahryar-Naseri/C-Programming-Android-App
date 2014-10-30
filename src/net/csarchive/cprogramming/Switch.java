@@ -7,14 +7,18 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class Switch extends ListActivity{
 	
 	String[] items;
 	ListView l;
+	EditText etSearch;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +26,28 @@ public class Switch extends ListActivity{
 		setContentView(R.layout.list);
 		getFileList();
 		l = getListView();
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(Switch.this, android.R.layout.simple_list_item_1, items);
+		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Switch.this, android.R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);
+		etSearch = (EditText) findViewById(R.id.etSearch);
+		etSearch.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
+				adapter.getFilter().filter(s);
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				
+			}
+		});
 	}
 
 	private void getFileList() {

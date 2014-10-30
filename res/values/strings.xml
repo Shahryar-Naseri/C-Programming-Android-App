@@ -27,5 +27,7 @@
     <string name="btnSend">Send</string>
     <string name="tvList">Programs List</string>
     <string name="tvSave">Press the button below to save all the programs on your device\'s SD card.</string>
+    <string name="ivSearch">Search</string>
+    <string name="etSearch">Search this list</string>
 
 </resources>
