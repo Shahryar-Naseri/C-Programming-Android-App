@@ -1651,7 +1651,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090030;
         public static final int action_mode_bar_stub=0x7f09002f;
         public static final int action_mode_close_button=0x7f090022;
-        public static final int action_settings=0x7f09005e;
+        public static final int action_settings=0x7f09005f;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1660,6 +1660,7 @@ containing a value of this type.
         public static final int btnContact=0x7f090059;
         public static final int btnCopy=0x7f090051;
         public static final int btnDecrease=0x7f09004f;
+        public static final int btnExit=0x7f09005b;
         public static final int btnFontColor=0x7f090052;
         public static final int btnIncrease=0x7f09004d;
         public static final int btnMainMenu=0x7f090053;
@@ -1724,9 +1725,9 @@ containing a value of this type.
         public static final int tvIntro=0x7f090044;
         public static final int tvMessage=0x7f09004a;
         public static final int tvName=0x7f090046;
-        public static final int tvSave=0x7f09005b;
-        public static final int tvSplashDesc=0x7f09005d;
-        public static final int tvSplashTitle=0x7f09005c;
+        public static final int tvSave=0x7f09005c;
+        public static final int tvSplashDesc=0x7f09005e;
+        public static final int tvSplashTitle=0x7f09005d;
         public static final int tvSubject=0x7f090048;
         public static final int tvVersion=0x7f090041;
         public static final int up=0x7f090001;
@@ -1856,6 +1857,7 @@ containing a value of this type.
         public static final int btnContact=0x7f0a0015;
         public static final int btnCopy=0x7f0a001c;
         public static final int btnDecrease=0x7f0a001b;
+        public static final int btnExit=0x7f0a002c;
         public static final int btnFontColor=0x7f0a001d;
         public static final int btnIncrease=0x7f0a0019;
         public static final int btnMainMenu=0x7f0a002b;

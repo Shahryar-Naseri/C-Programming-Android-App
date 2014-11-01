@@ -13,7 +13,7 @@ public class Menu extends ListActivity implements View.OnClickListener{
 	String[] chapters = {"All", "Array", "Function", "Library Functions", "Linked List", "Loop", "Pointer",  
 			"Recursion", "Structure", "Switch", "String"};
 	ListView l;
-	Button btnMainMenu, btnViewAll;
+	Button btnMainMenu, btnSaveAll;
 	String TAG;
 	
 	
@@ -22,9 +22,9 @@ public class Menu extends ListActivity implements View.OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
-		btnViewAll = (Button) findViewById(R.id.btnViewAll);
+		btnSaveAll = (Button) findViewById(R.id.btnSaveAll);
 		btnMainMenu.setOnClickListener(this);
-		btnViewAll.setOnClickListener(this);
+		btnSaveAll.setOnClickListener(this);
 		l = getListView();
 		l.setAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_expandable_list_item_1, chapters));
 	}
@@ -91,7 +91,7 @@ public class Menu extends ListActivity implements View.OnClickListener{
 			startActivity(i);
 		}
 		else{
-			Intent i = new Intent("net.csarchive.cprogramming.All");
+			Intent i = new Intent("net.csarchive.cprogramming.Save");
 			startActivity(i);
 		}
 	}

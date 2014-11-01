@@ -12,7 +12,7 @@ import android.widget.Button;
 public class MainMenu extends Activity implements View.OnClickListener{
 	
 
-	Button btnProgramsList, btnViewAll, btnSaveAll, btnContact, btnAbout;
+	Button btnProgramsList, btnViewAll, btnSaveAll, btnContact, btnAbout, btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,13 @@ public class MainMenu extends Activity implements View.OnClickListener{
         btnViewAll = (Button) findViewById(R.id.btnViewAll);
         btnSaveAll = (Button) findViewById(R.id.btnSaveAll);
         btnAbout = (Button) findViewById(R.id.btnAbout);
+        btnExit = (Button) findViewById(R.id.btnExit);
         btnProgramsList.setOnClickListener(this);
         btnViewAll.setOnClickListener(this);
         btnContact.setOnClickListener(this);  
         btnSaveAll.setOnClickListener(this);
         btnAbout.setOnClickListener(this);
+        btnExit.setOnClickListener(this);
     }
 
 	@Override
@@ -49,9 +51,12 @@ public class MainMenu extends Activity implements View.OnClickListener{
 			Intent i = new Intent("net.csarchive.cprogramming.Contact");
 			startActivity(i);
 		}
-		else{
+		else if(v.getId() == R.id.btnAbout){
 			Intent i = new Intent("net.csarchive.cprogramming.About");
 			startActivity(i);
+		}
+		else{
+			onBackPressed();
 		}
 	}
 	

@@ -349,7 +349,7 @@ int id action_menu_presenter 0x7f090006
 int id action_mode_bar 0x7f090030
 int id action_mode_bar_stub 0x7f09002f
 int id action_mode_close_button 0x7f090022
-int id action_settings 0x7f09005e
+int id action_settings 0x7f09005f
 int id activity_chooser_view_content 0x7f090023
 int id always 0x7f090014
 int id beginning 0x7f09001b
@@ -358,6 +358,7 @@ int id btnAbout 0x7f09005a
 int id btnContact 0x7f090059
 int id btnCopy 0x7f090051
 int id btnDecrease 0x7f09004f
+int id btnExit 0x7f09005b
 int id btnFontColor 0x7f090052
 int id btnIncrease 0x7f09004d
 int id btnMainMenu 0x7f090053
@@ -422,9 +423,9 @@ int id tvInfo 0x7f090043
 int id tvIntro 0x7f090044
 int id tvMessage 0x7f09004a
 int id tvName 0x7f090046
-int id tvSave 0x7f09005b
-int id tvSplashDesc 0x7f09005d
-int id tvSplashTitle 0x7f09005c
+int id tvSave 0x7f09005c
+int id tvSplashDesc 0x7f09005e
+int id tvSplashTitle 0x7f09005d
 int id tvSubject 0x7f090048
 int id tvVersion 0x7f090041
 int id up 0x7f090001
@@ -486,6 +487,7 @@ int string btnAbout 0x7f0a0016
 int string btnContact 0x7f0a0015
 int string btnCopy 0x7f0a001c
 int string btnDecrease 0x7f0a001b
+int string btnExit 0x7f0a002c
 int string btnFontColor 0x7f0a001d
 int string btnIncrease 0x7f0a0019
 int string btnMainMenu 0x7f0a002b
