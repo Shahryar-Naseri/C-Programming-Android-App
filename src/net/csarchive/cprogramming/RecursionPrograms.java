@@ -18,6 +18,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +26,8 @@ import android.widget.Toast;
 public class RecursionPrograms extends Activity implements View.OnClickListener{
 	
 	TextView tv;
-	Button btnIncrease, btnDecrease, btnShare, btnCopy, btnFontColor;
+	Button btnIncrease, btnDecrease, btnCopy, btnFontColor;
+	ImageButton btnShare;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class RecursionPrograms extends Activity implements View.OnClickListener{
 		tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimension(R.dimen.textsize3));
 		btnIncrease = (Button) findViewById(R.id.btnIncrease);
 		btnDecrease = (Button) findViewById(R.id.btnDecrease);
-		btnShare = (Button) findViewById(R.id.btnShare);
+		btnShare = (ImageButton) findViewById(R.id.btnShare);
 		btnCopy = (Button) findViewById(R.id.btnCopy);
 		btnFontColor = (Button) findViewById(R.id.btnFontColor);
 		btnIncrease.setOnClickListener(this);

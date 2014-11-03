@@ -1636,6 +1636,7 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int c=0x7f020033;
         public static final int ic_action_search=0x7f020034;
+        public static final int ic_action_share=0x7f020035;
     }
     public static final class id {
         public static final int action_bar=0x7f090033;
@@ -1851,36 +1852,35 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000d;
-        public static final int action_settings=0x7f0a0011;
+        public static final int action_settings=0x7f0a0010;
         public static final int app_name=0x7f0a000f;
-        public static final int btnAbout=0x7f0a0016;
-        public static final int btnContact=0x7f0a0015;
-        public static final int btnCopy=0x7f0a001c;
-        public static final int btnDecrease=0x7f0a001b;
-        public static final int btnExit=0x7f0a002c;
-        public static final int btnFontColor=0x7f0a001d;
-        public static final int btnIncrease=0x7f0a0019;
-        public static final int btnMainMenu=0x7f0a002b;
-        public static final int btnProgramsList=0x7f0a0012;
-        public static final int btnSaveAll=0x7f0a0014;
-        public static final int btnSend=0x7f0a0026;
-        public static final int btnShare=0x7f0a001a;
-        public static final int btnViewAll=0x7f0a0013;
-        public static final int etSearch=0x7f0a002a;
-        public static final int hello_world=0x7f0a0010;
-        public static final int ivSearch=0x7f0a0029;
-        public static final int tvCreate=0x7f0a001f;
-        public static final int tvEmail=0x7f0a0022;
-        public static final int tvInfo=0x7f0a0020;
-        public static final int tvIntro=0x7f0a0021;
-        public static final int tvList=0x7f0a0027;
-        public static final int tvMessage=0x7f0a0025;
-        public static final int tvName=0x7f0a0023;
-        public static final int tvSave=0x7f0a0028;
-        public static final int tvSplashDesc=0x7f0a0018;
-        public static final int tvSplashTitle=0x7f0a0017;
-        public static final int tvSubject=0x7f0a0024;
-        public static final int tvVersion=0x7f0a001e;
+        public static final int btnAbout=0x7f0a0015;
+        public static final int btnContact=0x7f0a0014;
+        public static final int btnCopy=0x7f0a001b;
+        public static final int btnDecrease=0x7f0a001a;
+        public static final int btnExit=0x7f0a002b;
+        public static final int btnFontColor=0x7f0a001c;
+        public static final int btnIncrease=0x7f0a0018;
+        public static final int btnMainMenu=0x7f0a002a;
+        public static final int btnProgramsList=0x7f0a0011;
+        public static final int btnSaveAll=0x7f0a0013;
+        public static final int btnSend=0x7f0a0025;
+        public static final int btnShare=0x7f0a0019;
+        public static final int btnViewAll=0x7f0a0012;
+        public static final int etSearch=0x7f0a0029;
+        public static final int ivSearch=0x7f0a0028;
+        public static final int tvCreate=0x7f0a001e;
+        public static final int tvEmail=0x7f0a0021;
+        public static final int tvInfo=0x7f0a001f;
+        public static final int tvIntro=0x7f0a0020;
+        public static final int tvList=0x7f0a0026;
+        public static final int tvMessage=0x7f0a0024;
+        public static final int tvName=0x7f0a0022;
+        public static final int tvSave=0x7f0a0027;
+        public static final int tvSplashDesc=0x7f0a0017;
+        public static final int tvSplashTitle=0x7f0a0016;
+        public static final int tvSubject=0x7f0a0023;
+        public static final int tvVersion=0x7f0a001d;
     }
     public static final class style {
         /** 
