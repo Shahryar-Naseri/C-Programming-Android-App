@@ -1,0 +1,5 @@
+Enter the base of Right Angle Triangle: 5
+
+Enter the height of Right Angle Triangle: 10
+
+Area of Right Angle Triangle: 25.000000

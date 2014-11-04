@@ -1,0 +1,4 @@
+Enter radius of circle: 4
+
+Area of circle: 50.240002
+Circumference: 25.120001

@@ -83,6 +83,14 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:name=".Area"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".AreaPrograms"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name=".Array"
             android:label="@string/app_name" >
         </activity>

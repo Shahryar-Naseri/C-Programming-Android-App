@@ -1,0 +1,7 @@
+Enter side1: 3
+
+Enter side2: 5
+
+Enter included angle: 60
+
+Area of Scalene Triangle: 6.495191

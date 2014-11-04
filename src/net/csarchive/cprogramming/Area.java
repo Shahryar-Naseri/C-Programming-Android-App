@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class Array extends ListActivity implements View.OnClickListener{
+public class Area extends ListActivity implements View.OnClickListener{
 	
 	String[] items;
 	ListView l;
@@ -32,7 +32,7 @@ public class Array extends ListActivity implements View.OnClickListener{
 		btnMainMenu.setOnClickListener(this);
 		getFileList();
 		l = getListView();
-		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Array.this, android.R.layout.simple_list_item_1, items);
+		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Area.this, android.R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);
 		etSearch = (EditText) findViewById(R.id.etSearch);
 		etSearch.addTextChangedListener(new TextWatcher() {
@@ -62,7 +62,7 @@ public class Array extends ListActivity implements View.OnClickListener{
 		final AssetManager assetManager = getAssets();
 		String[] filelist;
 		try {
-			filelist = assetManager.list("Array");
+			filelist = assetManager.list("Area");
 			for(String name: filelist){
 				name = name.substring(0, name.length() - 4);
 				filesArrayList.add(name);
@@ -79,7 +79,7 @@ public class Array extends ListActivity implements View.OnClickListener{
 		// Send item position as an integer to AllPrograms activity.
 		super.onListItemClick(l, v, position, id);
 		int p = position;
-		Intent i = new Intent(Array.this, ArrayPrograms.class);
+		Intent i = new Intent(Area.this, AreaPrograms.class);
 		i.putExtra("KEY", p);
 		startActivity(i);
 	}
