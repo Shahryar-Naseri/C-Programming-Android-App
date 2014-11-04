@@ -1,0 +1,7 @@
+Enter the employee Name, Age, and Salary:
+
+Jack
+25
+100000
+
+Jack     25     100000.000000

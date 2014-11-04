@@ -1,0 +1,27 @@
+Enter the info of two students:
+
+Roll no
+Name
+College Name
+Score
+
+1
+ABC
+KL
+100
+2
+DEF
+KL
+80
+
+1
+ABC
+KL
+100
+
+2
+DEF
+KL
+80
+
+Size = 56

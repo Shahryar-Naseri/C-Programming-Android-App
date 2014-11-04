@@ -1,4 +1,4 @@
-/* Program to sort the record of students merit wise */
+/* Program to sort the record of two students merit wise */
 #include<stdio.h>
 #include<conio.h>
 main()
@@ -13,7 +13,7 @@ main()
 	struct student s[2],temp;
 	int i,j;
 	clrscr();
-	printf("Enter values:\n");
+	printf("Enter the info of two students:\n\nRoll no\nName\nCollege Name\nScore\n\n");
 	for(i=0;i<2;i++)
 	scanf("%d%s%s%d",&s[i].rollno,&s[i].name,&s[i].college,&s[i].score);
 	for(i=0;i<2;i++)
@@ -31,6 +31,6 @@ main()
 	for(i=0;i<2;i++)
 	printf("\n%d\n%s\n%s\n%d\n",s[i].rollno,s[i].name,s[i].college,s[i].score);
 	int x=sizeof(s);
-	printf("%d",x);
+	printf("\nSize = %d",x);
 	getch();
 }

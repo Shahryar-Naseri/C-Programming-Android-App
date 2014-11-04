@@ -57,7 +57,7 @@
         android:layout_weight="1" />
     
     <LinearLayout
-        android:weightSum="2"
+        android:weightSum="3"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -65,26 +65,38 @@
 
     <Button
         android:id="@+id/btnCopy"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:background="#ffffff"
         android:padding="5dp"
         android:layout_weight="1"
         android:layout_marginRight="2dp"
         android:text="@string/btnCopy" />
     
+     <Button
+        android:id="@+id/btnOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
+        android:text="@string/btnOutput" />
+    
     <Button
             android:id="@+id/btnFontColor"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:background="#ffffff"
             android:text="@string/btnFontColor"
             android:padding="5dp"
             android:layout_weight="1" />
-    
+     
     </LinearLayout>
 
 </LinearLayout>

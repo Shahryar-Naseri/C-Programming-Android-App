@@ -1,0 +1,16 @@
+Select option:
+
+1:cos-1(x)
+2:sin-1(x)
+3:tan-1(x)
+4:tan-1(x/y)
+5:cos(X)
+6:sin(X)
+7:tan(X)
+8:Exit
+
+6
+Enter the value = 60
+-0.304811
+
+Want to continue(Y/N)?

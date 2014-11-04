@@ -5,10 +5,10 @@ void main()
 {
    int rec(int);
    int a,fact;
-   printf("\nenter any number");
+   printf("Enter any number: ");
    scanf("%d",&a);
    fact=rec(a);
-   printf("factorial value=%d",fact);
+   printf("Factorial value = %d",fact);
    getch();
 }
 rec(int x)

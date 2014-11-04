@@ -30,5 +30,7 @@
     <string name="etSearch">Search this list</string>
     <string name="btnMainMenu">MAIN MENU</string>
     <string name="btnExit">EXIT</string>
+    <string name="btnClose">CLOSE</string>
+    <string name="btnOutput">OUTPUT</string>
 
 </resources>

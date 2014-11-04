@@ -5,7 +5,7 @@ void main()
 {
 	int fib(int,int,int,int),x,f=0,f1=0,f2=1,n;
 	clrscr();
-	printf("Enter range:");
+	printf("Enter range: ");
 	scanf("%d",&n);
 	printf("%d\t%d",f1,f2);
 	x=fib(f1,f2,f,n);

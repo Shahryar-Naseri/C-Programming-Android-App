@@ -1,0 +1,15 @@
+Miscellaneous function
+
+Menu:
+1:ceil
+2:floor
+3:to ascii
+4:to lower
+5:to upper
+6:Exit
+
+Select the option (1-6): 5
+Enter the value = l
+L
+
+Want to continue(Y/N)?

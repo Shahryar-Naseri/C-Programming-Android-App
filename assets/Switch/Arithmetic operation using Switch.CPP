@@ -7,30 +7,30 @@ main()
 	clrscr();
 	char ans='y';
 	int a,b,c,op;
-	printf("Enter a:");
+	printf("Enter the first number: ");
 	scanf("%d",&a);
-	printf("Enter b:");
+	printf("Enter the second number: ");
 	scanf("%d",&b);
 	while(ans=='y')
 	{
-		printf("\nselect operation");
-		printf("\n1:add\n2:sub\n3:mul\n4:exit\n");
+		printf("\nSelect operation");
+		printf("\n1:Add\n2:Subtract\n3:Multiply\n4:Exit\n\n");
 		scanf("%d",&op);
 		switch(op)
 		{
 			case 1:c=a+b;
-			printf("%d",c);
+			printf("Addition of the two numbers = %d",c);
 			break;
 			case 2:c=a-b;
-			printf("%d",c);
+			printf("Subtraction of the two numbers = %d",c);
 			break;
 			case 3:c=a*b;
-			printf("%d",c);
+			printf("Multiplication of the two numbers = %d",c);
 			break;
 			case 4:exit(0);
-			default :printf("Enter valid value(1-4)");
+			default :printf("Please enter valid value(1-4)");
 		}
-		printf("\nWant to continue(Y/N)?");
+		printf("\n\nWant to continue(Y/N)?");
 		ans=getch();
 	}
 	getch();
