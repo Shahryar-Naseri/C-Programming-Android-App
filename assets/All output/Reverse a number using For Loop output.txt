@@ -1,0 +1,2 @@
+Enter number: 256
+652

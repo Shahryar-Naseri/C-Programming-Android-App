@@ -1,0 +1,12 @@
+Enter the first number: 3
+Enter the second number: 5
+
+Select operation
+1:Add
+2:Subtract
+3: Multiply
+
+1
+Addition of the two numbers = 8
+
+Want to continue(Y/N)?

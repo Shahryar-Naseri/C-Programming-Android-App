@@ -1,0 +1,17 @@
+Largest and Smallest of n numbers
+
+Menu:
+
+1:Largest
+2:Smallest
+Select the option(1-2): 1
+Enter range: 3
+Enter the elements:
+
+1
+2
+3
+
+The Largest value is 3
+
+Want to continue?(Y/N)

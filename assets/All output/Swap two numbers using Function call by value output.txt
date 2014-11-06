@@ -1,0 +1,5 @@
+Enter A: 10
+Enter B: 20
+
+A = 20 B = 10
+A = 10 B = 20

@@ -1,0 +1,15 @@
+Enter elements: 
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Summation of Even numbers: 30
+Multiplication of Odd numbers: 945

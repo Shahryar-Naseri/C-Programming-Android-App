@@ -1,0 +1,13 @@
+Enter range between (0-19): 5
+Enter values:
+
+23
+-56
+7
+89
+4
+
+Number of Positives: 4
+Number of Negatives: 1
+Number of Evens: 2
+Number of Odds: 3

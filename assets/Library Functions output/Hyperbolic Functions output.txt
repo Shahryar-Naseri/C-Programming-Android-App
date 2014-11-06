@@ -1,0 +1,12 @@
+Select option:
+
+1:cosh
+2:sinh
+3:tanh
+4:Exit
+
+Enter value: 1
+
+1.543081
+
+Want to continue?(Y/N)

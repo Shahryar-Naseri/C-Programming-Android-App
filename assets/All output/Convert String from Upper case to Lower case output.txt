@@ -1,0 +1,2 @@
+Enter string in upper case: HELLO
+hello

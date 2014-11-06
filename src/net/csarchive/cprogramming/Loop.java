@@ -64,7 +64,7 @@ public class Loop extends ListActivity implements View.OnClickListener{
 		try {
 			filelist = assetManager.list("Loop");
 			for(String name: filelist){
-				name = name.substring(0, name.length() - 4);
+				name = name.substring(0, name.length() - 2);
 				filesArrayList.add(name);
 			}
 		} catch (IOException e) {

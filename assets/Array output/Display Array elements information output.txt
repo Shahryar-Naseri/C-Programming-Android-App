@@ -1,0 +1,17 @@
+How many elements do you want to enter?
+
+3
+
+Enter different elements:
+
+1
+2
+3
+
+Elements     Values     Address
+1            1          2293364
+2            2          2293368
+3            3          2293372
+
+Sum = 6
+Address of Sum = 2293348

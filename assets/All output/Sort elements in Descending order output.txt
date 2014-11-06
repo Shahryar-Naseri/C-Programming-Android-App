@@ -1,0 +1,12 @@
+Enter range between (0-19): 5
+Enter numbers:
+
+68
+5
+34
+9
+76
+
+Sorted list:
+
+76     68     34     9     5

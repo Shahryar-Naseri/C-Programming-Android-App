@@ -1,0 +1,10 @@
+Enter range between (0-19): 5
+Enter values:
+
+5
+9
+2
+6
+8
+
+Sum = 11

@@ -1,0 +1,4 @@
+Enter number: 2
+Enter power: 3
+
+2 raised to power 3 is 8

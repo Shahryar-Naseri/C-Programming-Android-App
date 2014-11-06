@@ -1,0 +1,9 @@
+Enter the range between (0-19): 3
+Enter the numbers:
+
+1
+2
+3
+
+Largest = 3
+Smallest = 1

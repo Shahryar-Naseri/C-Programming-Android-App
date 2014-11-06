@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -26,13 +27,14 @@ import android.widget.Toast;
 public class LoopPrograms extends Activity implements View.OnClickListener{
 	
 	TextView tv;
-	Button btnIncrease, btnDecrease, btnCopy, btnFontColor;
+	Button btnIncrease, btnDecrease, btnCopy, btnFontColor, btnOutput;
 	ImageButton btnShare;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.display);
+		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		tv = (TextView) findViewById(R.id.tvDisplay);
 		tv.setMovementMethod(new ScrollingMovementMethod());
 		openFile();
@@ -42,11 +44,13 @@ public class LoopPrograms extends Activity implements View.OnClickListener{
 		btnShare = (ImageButton) findViewById(R.id.btnShare);
 		btnCopy = (Button) findViewById(R.id.btnCopy);
 		btnFontColor = (Button) findViewById(R.id.btnFontColor);
+		btnOutput = (Button) findViewById(R.id.btnOutput);
 		btnIncrease.setOnClickListener(this);
 		btnDecrease.setOnClickListener(this);
 		btnShare.setOnClickListener(this);
 		btnCopy.setOnClickListener(this);
 		btnFontColor.setOnClickListener(this);
+		btnOutput.setOnClickListener(this);
 	}
 
 	private void openFile() {
@@ -117,6 +121,17 @@ public class LoopPrograms extends Activity implements View.OnClickListener{
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
+	
+	private void programOutput() {
+		// TODO Auto-generated method stub
+		Bundle extras = getIntent().getExtras();
+		int temp = extras.getInt("KEY");
+		String fileName = "Loop output";
+		Intent i = new Intent(LoopPrograms.this, Output.class);
+		i.putExtra("KEY", temp);
+		i.putExtra("NAME", fileName);
+		startActivity(i);
+	}
 
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
@@ -150,6 +165,9 @@ public class LoopPrograms extends Activity implements View.OnClickListener{
 				Toast.makeText(getBaseContext(), "Copied to the clipboard", Toast.LENGTH_LONG).show();
 			}
 			
+		}
+		else if(v.getId() == R.id.btnOutput){
+			programOutput();
 		}
 		else{
 			fontColor();

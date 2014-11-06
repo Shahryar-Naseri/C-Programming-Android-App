@@ -1,0 +1,6 @@
+Enter name: Jack
+Enter age: 25
+Enter score: 90
+
+Jack 25 90.000000
+Jack 25 90.000000

@@ -1,0 +1,16 @@
+Enter element of A:
+
+1
+2
+3
+
+Enter element of B:
+
+4
+5
+6
+
+Addition of two Arrays: 5     7     9
+Subtraction of two Arrays: -3     -3     -3
+Multiplication of two Arrays: 4     10     18
+Division of two Arrays: 0     0     0

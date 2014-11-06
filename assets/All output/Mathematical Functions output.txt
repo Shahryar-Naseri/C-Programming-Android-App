@@ -1,0 +1,19 @@
+Select option:
+
+1:Absolute value
+2:Square
+3:Float absolute value
+4:Power
+5:Logarithm
+6:Logarithm10
+7:e power x
+8:Mode
+9:Exit
+
+1
+
+Enter value: 12.5
+
+12
+
+Want to continue?(Y/N)

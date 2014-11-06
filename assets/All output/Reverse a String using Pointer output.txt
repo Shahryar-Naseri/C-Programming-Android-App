@@ -1,0 +1,4 @@
+Enter string: hello
+
+Number of characters = 5
+olleh

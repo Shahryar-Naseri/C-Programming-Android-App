@@ -1,0 +1,4 @@
+Enter string: hello
+Enter character you want to find: l
+
+Character is present

@@ -1,0 +1,12 @@
+Enter the range between (0-19): 5
+Enter numbers:
+
+23
+68
+4
+75
+89
+
+Sorted list:
+
+4     23     68     75     89

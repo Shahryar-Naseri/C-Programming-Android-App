@@ -1,0 +1,39 @@
+Select operation
+1:Add
+2:Display
+
+1
+
+Enter number: 10
+
+Continue?(Y/N):
+
+Select operation
+1:Add
+2:Display
+
+1
+
+Enter number: 5
+
+Continue?(Y/N):
+
+Select operation
+1:Add
+2:Display
+
+1
+
+Enter number: 20
+
+Continue?(Y/N):
+
+2
+
+Sorted Linked List:
+-------------------
+       5
+	   10
+	   20
+-------------------
+Continue?(Y/N):

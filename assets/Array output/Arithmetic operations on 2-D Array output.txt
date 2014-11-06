@@ -1,0 +1,27 @@
+Enter elements of A:
+
+12
+35
+69
+78
+45
+9
+20
+45
+87
+
+Enter elements of B:
+
+34
+96
+15
+68
+65
+49
+93
+72
+12
+
+Addition of two Arrays: 46     131     84     146     110     58     113     117     99
+Subtraction of two Arrays: -22     -61     54     10     -20     -40     -73     -27     75
+Multiplication of two Arrays: 408     3360     1035     5304     2925     441     1860     3240     1044

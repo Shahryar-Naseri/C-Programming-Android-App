@@ -1,0 +1,6 @@
+Enter A and B:
+
+5
+6
+
+Sum = 11

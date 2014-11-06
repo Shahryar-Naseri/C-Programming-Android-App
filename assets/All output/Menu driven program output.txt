@@ -1,0 +1,13 @@
+
+Select operation
+
+1:Factorial
+2:Maximum
+3:Odd or Even
+4:Exit
+
+1
+Enter number: 5
+120
+
+Want to continue(Y/N)?
