@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:layout_marginRight="2dp"
         android:text="@string/btnMainMenu" />
 
@@ -27,7 +27,7 @@
         android:id="@+id/btnProgramsList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:layout_marginLeft="2dp"
         android:layout_weight="1"
         android:text="@string/btnProgramsList" />
@@ -46,7 +46,7 @@
         android:contentDescription="@string/ivSearch"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:src="@drawable/ic_action_search" />
 
     <EditText
@@ -55,7 +55,7 @@
         android:layout_height="40dp"
         android:padding="5dp"
         android:singleLine="true"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:hint="@string/etSearch"
         android:ems="10" /> 
 
@@ -65,7 +65,7 @@
         android:id="@android:id/list"
         android:padding="20dp"
         android:layout_width="fill_parent"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:layout_height="fill_parent" />
 
 </LinearLayout>

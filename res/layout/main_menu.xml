@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnProgramsList" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnProgramsList"
         android:layout_marginTop="16dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnViewAll" />
     
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnViewAll"
         android:layout_marginTop="16dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnSaveAll" />
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSaveAll"
         android:layout_marginTop="16dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnContact" />
     
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnContact"
         android:layout_marginTop="16dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnAbout" />
     
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnAbout"
         android:layout_marginTop="16dp"
-        android:background="#E8F3FF"
+        android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnExit" />
 
