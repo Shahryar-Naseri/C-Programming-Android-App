@@ -56,7 +56,7 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 	private void openFile() {
 		// Using AssetManager and InputStream to open file selected by the user.
 		Bundle extras = getIntent().getExtras();
-		int temp = extras.getInt("KEY");
+		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
 		ArrayList<String> filesArrayList = new ArrayList<String>();
 		String[] filelist;
@@ -73,7 +73,7 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 		filesArrayList.toArray(items);
 		
 		try {
-			InputStream is = am.open("Area/" + items[temp]);
+			InputStream is = am.open("Area/" + temp + ".c");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);
@@ -125,11 +125,9 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 	private void programOutput() {
 		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
-		int temp = extras.getInt("KEY");
-		String fileName = "Area output";
+		String temp = "Area output/" + extras.getString("KEY");
 		Intent i = new Intent(AreaPrograms.this, Output.class);
 		i.putExtra("KEY", temp);
-		i.putExtra("NAME", fileName);
 		startActivity(i);
 	}
 

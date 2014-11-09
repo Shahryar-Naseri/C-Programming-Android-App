@@ -21,6 +21,7 @@ public class Array extends ListActivity implements View.OnClickListener{
 	ListView l;
 	EditText etSearch;
 	Button btnProgramsList, btnMainMenu;
+	ArrayAdapter<String> adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +33,23 @@ public class Array extends ListActivity implements View.OnClickListener{
 		btnMainMenu.setOnClickListener(this);
 		getFileList();
 		l = getListView();
-		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Array.this, android.R.layout.simple_list_item_1, items);
+		adapter = new ArrayAdapter<String>(Array.this, android.R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);
 		etSearch = (EditText) findViewById(R.id.etSearch);
 		etSearch.addTextChangedListener(new TextWatcher() {
 			
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				// TODO Auto-generated method stub
 				adapter.getFilter().filter(s);
 			}
 			
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				
 			}
 			
 			@Override
 			public void afterTextChanged(Editable s) {
-				
 			}
 		});
 	}
@@ -78,9 +76,9 @@ public class Array extends ListActivity implements View.OnClickListener{
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// Send item position as an integer to AllPrograms activity.
 		super.onListItemClick(l, v, position, id);
-		int p = position;
+		String str = adapter.getItem(position);
 		Intent i = new Intent(Array.this, ArrayPrograms.class);
-		i.putExtra("KEY", p);
+		i.putExtra("KEY", str);
 		startActivity(i);
 	}
 

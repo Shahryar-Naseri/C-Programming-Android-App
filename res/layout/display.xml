@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:background="#ffffff"
+            android:background="#E8F3FF"
             android:text="@string/btnIncrease"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -31,7 +31,7 @@
             android:layout_weight="4"
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
-            android:background="#ffffff"
+            android:background="#E8F3FF"
             android:contentDescription="@string/btnShare" />
 
         <Button
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:background="#ffffff"
+            android:background="#E8F3FF"
             android:text="@string/btnDecrease"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -51,7 +51,7 @@
         android:id="@+id/tvDisplay"
         android:padding="10dp"
         android:textSize="14sp"
-        android:background="#ffffff"
+        android:background="#E8F3FF"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        android:background="#ffffff"
+        android:background="#E8F3FF"
         android:padding="5dp"
         android:layout_weight="1"
         android:layout_marginRight="2dp"
@@ -79,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        android:background="#ffffff"
+        android:background="#E8F3FF"
         android:padding="5dp"
         android:layout_weight="1"
         android:layout_marginRight="1dp"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:textSize="14sp"
-            android:background="#ffffff"
+            android:background="#E8F3FF"
             android:text="@string/btnFontColor"
             android:padding="5dp"
             android:layout_weight="1" />

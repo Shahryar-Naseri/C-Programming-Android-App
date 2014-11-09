@@ -10,7 +10,7 @@
         android:id="@+id/tvDisplay"
         android:padding="10dp"
         android:textSize="14sp"
-        android:background="#ffffff"
+        android:background="#E8F3FF"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -27,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:background="#ffffff"
+        android:background="#E8F3FF"
         android:padding="5dp"
         android:text="@string/btnClose" />
     

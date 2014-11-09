@@ -35,13 +35,12 @@ public class Output extends Activity implements View.OnClickListener{
 	private void openOutput() {
 		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
-		int temp = extras.getInt("KEY");
-		String fileName = extras.getString("NAME");
+		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
 		ArrayList<String> filesArrayList = new ArrayList<String>();
 		String[] filelist;
 		try {
-			filelist = am.list(fileName);
+			filelist = am.list(temp.substring(0, temp.length() - 1));
 			for(String name: filelist){
 				filesArrayList.add(name);
 			}
@@ -53,7 +52,7 @@ public class Output extends Activity implements View.OnClickListener{
 		filesArrayList.toArray(items);
 		
 		try {
-			InputStream is = am.open(fileName + "/" + items[temp]);
+			InputStream is = am.open(temp + " output.txt");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);

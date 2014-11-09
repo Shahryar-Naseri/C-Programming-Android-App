@@ -56,7 +56,7 @@ public class SwitchPrograms extends Activity implements View.OnClickListener{
 	private void openFile() {
 		// Using AssetManager and InputStream to open file selected by the user.
 		Bundle extras = getIntent().getExtras();
-		int temp = extras.getInt("KEY");
+		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
 		ArrayList<String> filesArrayList = new ArrayList<String>();
 		String[] filelist;
@@ -73,7 +73,7 @@ public class SwitchPrograms extends Activity implements View.OnClickListener{
 		filesArrayList.toArray(items);
 		
 		try {
-			InputStream is = am.open("Switch/" + items[temp]);
+			InputStream is = am.open("Switch/" + temp + ".c");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);
@@ -125,11 +125,9 @@ public class SwitchPrograms extends Activity implements View.OnClickListener{
 	private void programOutput() {
 		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
-		int temp = extras.getInt("KEY");
-		String fileName = "Switch output";
+		String temp = "Switch output/" + extras.getString("KEY");
 		Intent i = new Intent(SwitchPrograms.this, Output.class);
 		i.putExtra("KEY", temp);
-		i.putExtra("NAME", fileName);
 		startActivity(i);
 	}
 

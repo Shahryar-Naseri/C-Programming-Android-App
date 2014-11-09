@@ -1,0 +1,7 @@
+Number: 0     Value: 10     Address: 2293536
+Number: 1     Value: 20     Address: 2293540
+Number: 2     Value: 30     Address: 2293544
+Number: 3     Value: 40     Address: 2263548
+Number: 4     Value: 50     Address: 2393552
+
+Sum is: 150
