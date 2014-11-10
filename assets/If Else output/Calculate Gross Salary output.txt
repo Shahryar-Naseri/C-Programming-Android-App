@@ -1,0 +1,2 @@
+Enter basic salary = 2000
+Gross salary = 4460.000000

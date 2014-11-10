@@ -1,0 +1,4 @@
+Enter two numbers to add:
+5
+6
+Sum of entered numbers = 11

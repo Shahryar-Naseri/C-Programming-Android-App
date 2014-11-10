@@ -1,0 +1,2 @@
+Enter a 5 digits number: 45123
+32154

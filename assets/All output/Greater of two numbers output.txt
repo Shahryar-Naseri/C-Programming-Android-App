@@ -1,0 +1,3 @@
+Enter value of A = 10
+Enter value of B = 20
+The Greater number is 20

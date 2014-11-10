@@ -1,0 +1,5 @@
+Enter value of A: 10
+Enter value of B: 30
+Enter value of C: 20
+
+The Greater number is 30

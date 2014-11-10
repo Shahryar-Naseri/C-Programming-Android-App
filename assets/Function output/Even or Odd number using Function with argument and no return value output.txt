@@ -1,0 +1,3 @@
+Enter number: 4
+
+4 is an Even number

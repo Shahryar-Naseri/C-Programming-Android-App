@@ -1,0 +1,7 @@
+Enter two integers:
+6
+5
+Sum = 11
+Difference = 1
+Multiplication = 30
+Division = 1.20

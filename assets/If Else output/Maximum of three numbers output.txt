@@ -1,0 +1,7 @@
+Enter value of A = 8
+
+Enter value of B = 10
+
+Enter value of C = 6
+
+The Maximum of three numbers is = 10

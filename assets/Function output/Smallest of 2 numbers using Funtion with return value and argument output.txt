@@ -1,0 +1,3 @@
+Enter A: 5
+Enter B: 8
+The Smallest of two numbers is = 5

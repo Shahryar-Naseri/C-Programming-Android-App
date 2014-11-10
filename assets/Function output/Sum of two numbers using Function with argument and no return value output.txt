@@ -1,0 +1,3 @@
+Enter A = 10
+Enter B = 20
+Sum = 30

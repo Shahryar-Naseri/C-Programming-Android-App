@@ -1,0 +1,9 @@
+Enter m1, m2, m3, m4, m5:
+
+80
+62
+78
+45
+66
+
+First Division

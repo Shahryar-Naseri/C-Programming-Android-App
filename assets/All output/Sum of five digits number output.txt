@@ -1,0 +1,3 @@
+Enter a 5 or less digits number: 45123
+
+Sum = 15

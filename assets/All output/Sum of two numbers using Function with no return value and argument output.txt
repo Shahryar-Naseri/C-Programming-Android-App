@@ -1,0 +1,6 @@
+Enter A = 10
+Enter B = 20
+Sum = 30
+Enter A = 5
+Enter B = 6
+Sum = 11

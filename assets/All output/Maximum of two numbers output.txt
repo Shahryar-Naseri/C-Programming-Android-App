@@ -1,0 +1,5 @@
+Enter value of A = 5
+
+Enter value of B = 8
+
+The Maximum of two numbers is = 8

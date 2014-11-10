@@ -1,0 +1,3 @@
+Enter number: 1356
+
+Sum = 15
