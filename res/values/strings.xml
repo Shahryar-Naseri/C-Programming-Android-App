@@ -32,5 +32,8 @@
     <string name="btnExit">EXIT</string>
     <string name="btnClose">CLOSE</string>
     <string name="btnOutput">OUTPUT</string>
+    <string name="tvSearch">Search for a Program</string>
+    <string name="btnSearch">SEARCH</string>
+    <string name="etSearchMain">Enter your search here</string>
 
 </resources>

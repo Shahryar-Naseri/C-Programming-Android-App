@@ -1,11 +1,15 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center"
-    android:padding="30dp"
     android:background="#198CFF"
     tools:context="net.csarchive.cprogramming.MainMenu" >
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="40dp" >
     
     <Button
         android:id="@+id/btnProgramsList"
@@ -35,12 +39,22 @@
         android:background="#D1E8FF"
         android:textSize="20sp"
         android:text="@string/btnSaveAll" />
+    
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSaveAll"
+        android:layout_marginTop="16dp"
+        android:background="#D1E8FF"
+        android:textSize="20sp"
+        android:text="@string/btnSearch" />
 
     <Button
         android:id="@+id/btnContact"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSaveAll"
+        android:layout_below="@+id/btnSearch"
         android:layout_marginTop="16dp"
         android:background="#D1E8FF"
         android:textSize="20sp"
@@ -67,3 +81,5 @@
         android:text="@string/btnExit" />
 
 </RelativeLayout>
+
+</ScrollView>

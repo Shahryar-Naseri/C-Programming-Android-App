@@ -121,7 +121,6 @@ public class ConditionalPrograms extends Activity implements View.OnClickListene
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "Conditional Operators output/" + extras.getString("KEY");
 		Intent i = new Intent(ConditionalPrograms.this, Output.class);

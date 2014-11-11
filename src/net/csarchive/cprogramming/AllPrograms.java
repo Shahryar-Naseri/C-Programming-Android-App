@@ -121,7 +121,6 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "All output/" + extras.getString("KEY");
 		Intent i = new Intent(AllPrograms.this, Output.class);

@@ -121,7 +121,6 @@ public class PointerPrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "Pointer output/" + extras.getString("KEY");
 		Intent i = new Intent(PointerPrograms.this, Output.class);

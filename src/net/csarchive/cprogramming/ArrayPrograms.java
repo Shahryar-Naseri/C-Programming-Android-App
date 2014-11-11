@@ -121,7 +121,6 @@ public class ArrayPrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "Array output/" + extras.getString("KEY");
 		Intent i = new Intent(ArrayPrograms.this, Output.class);

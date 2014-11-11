@@ -12,7 +12,7 @@ import android.widget.Button;
 public class MainMenu extends Activity implements View.OnClickListener{
 	
 
-	Button btnProgramsList, btnViewAll, btnSaveAll, btnContact, btnAbout, btnExit;
+	Button btnProgramsList, btnViewAll, btnSaveAll, btnSearch, btnContact, btnAbout, btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,14 @@ public class MainMenu extends Activity implements View.OnClickListener{
         btnContact = (Button) findViewById(R.id.btnContact);
         btnViewAll = (Button) findViewById(R.id.btnViewAll);
         btnSaveAll = (Button) findViewById(R.id.btnSaveAll);
+        btnSearch = (Button) findViewById(R.id.btnSearch);
         btnAbout = (Button) findViewById(R.id.btnAbout);
         btnExit = (Button) findViewById(R.id.btnExit);
         btnProgramsList.setOnClickListener(this);
         btnViewAll.setOnClickListener(this);
         btnContact.setOnClickListener(this);  
         btnSaveAll.setOnClickListener(this);
+        btnSearch.setOnClickListener(this);
         btnAbout.setOnClickListener(this);
         btnExit.setOnClickListener(this);
     }
@@ -45,6 +47,10 @@ public class MainMenu extends Activity implements View.OnClickListener{
 		}
 		else if(v.getId() == R.id.btnSaveAll){
 			Intent i = new Intent("net.csarchive.cprogramming.Save");
+			startActivity(i);
+		}
+		else if(v.getId() == R.id.btnSearch){
+			Intent i = new Intent("net.csarchive.cprogramming.Search");
 			startActivity(i);
 		}
 		else if(v.getId() == R.id.btnContact){

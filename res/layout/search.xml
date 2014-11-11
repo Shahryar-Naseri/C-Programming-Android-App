@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#198CFF"
+    tools:context="com.example.cprogramsdemo.MainActivity" >
+
+    <TextView
+        android:id="@+id/tvSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/tvSearch"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:contentDescription="@string/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/tvSearch"
+        android:layout_below="@+id/tvSearch"
+        android:background="#D1E8FF"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/ic_action_search" />
+
+    <EditText
+        android:id="@+id/etSearchMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#D1E8FF"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:layout_marginBottom="19dp"
+        android:hint="@string/etSearchMain"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:ems="10" />
+       
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etSearchMain"
+        android:layout_centerHorizontal="true"
+        android:background="#D1E8FF"
+        android:text="@string/btnSearch" />
+
+</RelativeLayout>

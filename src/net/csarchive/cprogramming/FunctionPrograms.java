@@ -121,7 +121,6 @@ public class FunctionPrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "Function output/" + extras.getString("KEY");
 		Intent i = new Intent(FunctionPrograms.this, Output.class);

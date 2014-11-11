@@ -121,7 +121,6 @@ public class SimplePrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "Simple output/" + extras.getString("KEY");
 		Intent i = new Intent(SimplePrograms.this, Output.class);

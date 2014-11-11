@@ -121,7 +121,6 @@ public class IfElsePrograms extends Activity implements View.OnClickListener{
 	}
 	
 	private void programOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = "If Else output/" + extras.getString("KEY");
 		Intent i = new Intent(IfElsePrograms.this, Output.class);

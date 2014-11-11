@@ -41,17 +41,15 @@ public class Pointer extends ListActivity implements View.OnClickListener{
 			
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				adapter.getFilter().filter(s);
+				adapter.getFilter().filter(s.toString().trim());
 			}
 			
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-			}
+					int after) {}
 			
 			@Override
-			public void afterTextChanged(Editable s) {
-			}
+			public void afterTextChanged(Editable s) {}
 		});
 	}
 
@@ -85,7 +83,6 @@ public class Pointer extends ListActivity implements View.OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		if(v.getId() == R.id.btnMainMenu){
 			Intent i = new Intent("net.csarchive.cprogramming.MainMenu");
 			startActivity(i);

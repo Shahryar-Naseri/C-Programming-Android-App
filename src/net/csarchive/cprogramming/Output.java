@@ -21,7 +21,6 @@ public class Output extends Activity implements View.OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.output);
 		tv = (TextView) findViewById(R.id.tvDisplay);
@@ -33,7 +32,6 @@ public class Output extends Activity implements View.OnClickListener{
 	}
 
 	private void openOutput() {
-		// TODO Auto-generated method stub
 		Bundle extras = getIntent().getExtras();
 		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
@@ -68,7 +66,6 @@ public class Output extends Activity implements View.OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		onBackPressed();
 	}
 
