@@ -1,0 +1,6 @@
+Enter two numbers:
+
+2.3
+5.6
+
+Product = 12.879999

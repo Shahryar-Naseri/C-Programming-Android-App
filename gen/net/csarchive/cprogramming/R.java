@@ -1724,10 +1724,10 @@ containing a value of this type.
         public static final int tabMode=0x7f09000c;
         public static final int title=0x7f090029;
         public static final int top=0x7f09001f;
-        public static final int tvCreate=0x7f090042;
+        public static final int tvCreate=0x7f090043;
         public static final int tvDisplay=0x7f090050;
         public static final int tvEmail=0x7f090045;
-        public static final int tvInfo=0x7f090043;
+        public static final int tvInfo=0x7f090042;
         public static final int tvIntro=0x7f090044;
         public static final int tvMessage=0x7f09004a;
         public static final int tvName=0x7f090046;

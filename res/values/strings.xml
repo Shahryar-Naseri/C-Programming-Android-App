@@ -16,8 +16,8 @@
     <string name="btnCopy">COPY TEXT</string>
     <string name="btnFontColor">FONT COLOR</string>
     <string name="tvVersion">C Programming Version 1.0</string>
-    <string name="tvCreate">Created by: Shahryar Naseri</string>
-    <string name="tvInfo">Email: info@csarchive.net</string>
+    <string name="tvCreate">C Programming is an Android application contains 100s of solved C programs including the outputs. All the programs have been tested and are bug free which can be used for reference and learning the C. You can share any program with your friends through Email, Message, and social networks such as Watsapp. This app also gives you the ability to save all the programs on your device SD card and transfer them to your PC or Laptop. For any feedback and request please use the contact page or send us an email to info@csarchive.net.</string>
+    <string name="tvInfo">&#169; All Rights Reserved</string>
     <string name="tvIntro">For any enquiry and feedback, simply fill the form below and send us an email. Your valuable suggestion for further enhancement of this application will be gratefully accepted.</string>
     <string name="tvEmail">Email: info@csarchive.net</string>
     <string name="tvName">Name</string>

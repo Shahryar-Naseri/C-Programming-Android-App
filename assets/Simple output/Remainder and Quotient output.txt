@@ -1,0 +1,5 @@
+Enter dividend: 14
+Enter divisor: 5
+
+Quotient = 2
+Reminder = 4
