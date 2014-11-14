@@ -8,7 +8,7 @@
 <RelativeLayout 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
+    android:layout_gravity="center"
     android:padding="30dp"
     android:background="#198CFF"
     tools:context="com.example.cprogramsdemo.MainActivity" >
@@ -33,20 +33,26 @@
         android:layout_marginTop="10dp"
         android:text="@string/tvInfo"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="#198CFF"
+    android:layout_below="@+id/tvInfo"
+    tools:context="com.example.cprogramsdemo.MainActivity" >
 
-    <TextView
-        android:id="@+id/tvCreate"
+    <WebView 
+        android:id="@+id/wvInfo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvInfo"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
-        android:layout_marginTop="10dp"
-        android:text="@string/tvCreate"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:background="#198CFF"
+        android:layout_marginTop="10dp" />
     
-    
-    
+    </RelativeLayout>
+     
 </RelativeLayout>
 
 </ScrollView>

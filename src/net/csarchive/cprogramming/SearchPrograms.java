@@ -20,10 +20,10 @@ import android.widget.Toast;
 
 public class SearchPrograms extends ListActivity{
 	
-	String[] items;
 	ListView l;
 	EditText etSearch;
 	ArrayAdapter<String> adapter;
+	ArrayList<String> filesArrayList;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +32,17 @@ public class SearchPrograms extends ListActivity{
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		Bundle extras = getIntent().getExtras();
 		String temp = extras.getString("KEY");
+		etSearch = (EditText) findViewById(R.id.etSearch);
 		getFileList();
 		l = getListView();
 		showResults(temp);
 		textChanged();
+		l.setAdapter(adapter);
 	}
 
 	private void getFileList() {
 		// Create an ArrayList to store all files' name inside assets\All folder.
-		ArrayList<String> filesArrayList = new ArrayList<String>();
+		filesArrayList = new ArrayList<String>();
 		final AssetManager assetManager = getAssets();
 		String[] filelist;
 		try {
@@ -52,26 +54,24 @@ public class SearchPrograms extends ListActivity{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		items = new String[filesArrayList.size()];
-		filesArrayList.toArray(items);
 	}
 	
-	private void showResults(String temp) {
-        adapter = new ArrayAdapter<String>(SearchPrograms.this, android.R.layout.simple_list_item_1, items);
+	private void showResults(final String temp) {
+        adapter = new ArrayAdapter<String>(SearchPrograms.this, android.R.layout.simple_list_item_1, filesArrayList);
+        final Toast toast = Toast.makeText(getBaseContext(), "No Result Found!\n\nPlese try again...", Toast.LENGTH_LONG);
+		toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
+		LinearLayout toastLayout = (LinearLayout) toast.getView();
+	    TextView toastTV = (TextView) toastLayout.getChildAt(0);
+	    toastTV.setTextSize(20);
         if(temp == null || temp.equals("")){
-			Toast toast = Toast.makeText(getBaseContext(), "No Result Found!\n\nPlese try again...", Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
-			LinearLayout toastLayout = (LinearLayout) toast.getView();
-		    TextView toastTV = (TextView) toastLayout.getChildAt(0);
-		    toastTV.setTextSize(20);
 			toast.show();
 		}
-        adapter.getFilter().filter(temp);
-        l.setAdapter(adapter);
+        else{
+        	adapter.getFilter().filter(temp);
+        } 
 	}
 	
 	private void textChanged() {
-		etSearch = (EditText) findViewById(R.id.etSearch);
 		etSearch.addTextChangedListener(new TextWatcher() {
 			
 			@Override

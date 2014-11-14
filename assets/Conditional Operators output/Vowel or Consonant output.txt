@@ -1,0 +1,4 @@
+Enter an alphabet: i
+
+i is a Vowel.
+

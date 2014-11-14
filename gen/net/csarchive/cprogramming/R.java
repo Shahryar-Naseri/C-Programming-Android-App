@@ -1724,7 +1724,6 @@ containing a value of this type.
         public static final int tabMode=0x7f09000c;
         public static final int title=0x7f090029;
         public static final int top=0x7f09001f;
-        public static final int tvCreate=0x7f090043;
         public static final int tvDisplay=0x7f090050;
         public static final int tvEmail=0x7f090045;
         public static final int tvInfo=0x7f090042;
@@ -1741,6 +1740,7 @@ containing a value of this type.
         public static final int useLogo=0x7f090013;
         public static final int withText=0x7f090018;
         public static final int wrap_content=0x7f090009;
+        public static final int wvInfo=0x7f090043;
     }
     public static final class integer {
         /**  The maximum number of action buttons that should be permitted within
