@@ -10,10 +10,13 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +31,10 @@ public class Search extends ListActivity implements View.OnClickListener, TextWa
 	Button btnSearch;
 	LinearLayout llSearch, llResults;
 	TextWatcher tw1, tw2;
+	LayoutInflater inflater;
+	View layout;
+	TextView tv;
+	ImageView iv;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -77,19 +84,30 @@ public class Search extends ListActivity implements View.OnClickListener, TextWa
 
 	@Override
 	public void onClick(View v) {
-		llSearch.setVisibility(View.GONE);
-		llResults.setVisibility(View.VISIBLE);
-		l.setVisibility(View.VISIBLE);
-		int num = adapter.getCount();
-		final Toast toast = Toast.makeText(getBaseContext(), "No Result Found!\nPlese try again...", Toast.LENGTH_LONG);
-		toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
-		LinearLayout toastLayout = (LinearLayout) toast.getView();
-	    TextView toastTV = (TextView) toastLayout.getChildAt(0);
-	    toastTV.setTextSize(20);
-	    String temp = etSearchMain.getText().toString();
-	    if(num == 0 || temp == null || temp.equals("")){
-	    	toast.show();
-	    }
+		String temp = etSearchMain.getText().toString();
+		inflater = getLayoutInflater();
+		layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
+		tv = (TextView) layout.findViewById(R.id.tvToast);
+		iv = (ImageView) layout.findViewById(R.id.ivToast);
+		tv.setTextSize(20);
+		Toast myToast = new Toast(getApplicationContext());
+		myToast.setDuration(Toast.LENGTH_LONG);
+		myToast.setView(layout);
+		if(temp == null || temp.equals("")){
+			tv.setText("Please Enter A Query To See The Result!");
+			myToast.show();
+		}
+		else{
+			llSearch.setVisibility(View.GONE);
+			llResults.setVisibility(View.VISIBLE);
+			l.setVisibility(View.VISIBLE);
+			int num = adapter.getCount();
+			if(num == 0){
+				myToast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
+				tv.setText("No Result Found! Please Try Again.");
+				myToast.show();
+			}
+		}   
 	}
 	
 	@Override

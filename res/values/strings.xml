@@ -35,5 +35,6 @@
     <string name="tvSearch">Search for a Program</string>
     <string name="btnSearch">SEARCH</string>
     <string name="etSearchMain">Enter your search here</string>
+    <string name="ivToast">Search Result</string>
 
 </resources>

@@ -1652,7 +1652,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090030;
         public static final int action_mode_bar_stub=0x7f09002f;
         public static final int action_mode_close_button=0x7f090022;
-        public static final int action_settings=0x7f090067;
+        public static final int action_settings=0x7f09006a;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1696,10 +1696,12 @@ containing a value of this type.
         public static final int image=0x7f090025;
         public static final int imageView1=0x7f090063;
         public static final int ivSearch=0x7f090056;
+        public static final int ivToast=0x7f090068;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090027;
         public static final int llResults=0x7f090060;
         public static final int llSearch=0x7f090061;
+        public static final int llToast=0x7f090067;
         public static final int middle=0x7f09001d;
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
@@ -1737,6 +1739,7 @@ containing a value of this type.
         public static final int tvSplashDesc=0x7f090066;
         public static final int tvSplashTitle=0x7f090065;
         public static final int tvSubject=0x7f090048;
+        public static final int tvToast=0x7f090069;
         public static final int tvVersion=0x7f090041;
         public static final int up=0x7f090001;
         public static final int useLogo=0x7f090013;
@@ -1804,6 +1807,7 @@ containing a value of this type.
         public static final int search=0x7f03001f;
         public static final int splash=0x7f030020;
         public static final int support_simple_spinner_dropdown_item=0x7f030021;
+        public static final int toast=0x7f030022;
     }
     public static final class menu {
         public static final int main_menu=0x7f0c0000;
@@ -1883,6 +1887,7 @@ containing a value of this type.
         public static final int etSearch=0x7f0a0029;
         public static final int etSearchMain=0x7f0a0030;
         public static final int ivSearch=0x7f0a0028;
+        public static final int ivToast=0x7f0a0031;
         public static final int tvCreate=0x7f0a001e;
         public static final int tvEmail=0x7f0a0021;
         public static final int tvInfo=0x7f0a001f;
