@@ -10,13 +10,21 @@ import android.app.Activity;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Save extends Activity implements View.OnClickListener{
 	
 	Button btnSaveAll;
+	LayoutInflater inflater;
+	View layout;
+	TextView tv;
+	ImageView iv;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +63,16 @@ public class Save extends Activity implements View.OnClickListener{
 				e.printStackTrace();
 			}
 		}
-		Toast.makeText(getBaseContext(), "All files saved in C Programs folder!", Toast.LENGTH_LONG).show();
+		inflater = getLayoutInflater();
+		layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
+		tv = (TextView) layout.findViewById(R.id.tvToast);
+		iv = (ImageView) layout.findViewById(R.id.ivToast);
+		tv.setTextSize(20);
+		tv.setText("All files saved in C Programs folder!");
+		Toast myToast = new Toast(getApplicationContext());
+		myToast.setDuration(Toast.LENGTH_LONG);
+		myToast.setView(layout);
+		myToast.show();
 	}
 
 	private void copyFiles(InputStream is, OutputStream os) throws IOException {

@@ -16,18 +16,25 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class RecursionPrograms extends Activity implements View.OnClickListener{
 	
-	TextView tv;
+	TextView tv, tvToast;
 	Button btnIncrease, btnDecrease, btnCopy, btnFontColor, btnOutput;
 	ImageButton btnShare;
+	LayoutInflater inflater;
+	View layout;
+	ImageView iv;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -151,15 +158,23 @@ public class RecursionPrograms extends Activity implements View.OnClickListener{
 			if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB){
 				android.text.ClipboardManager clipboardMgr = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 				clipboardMgr.setText(copy);
-				Toast.makeText(getBaseContext(), "Copied to the clipboard", Toast.LENGTH_LONG).show();
 			}
 			else{
 				android.content.ClipboardManager clipboardMgr = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 				ClipData clip = ClipData.newPlainText("Copied text", copy);
 				clipboardMgr.setPrimaryClip(clip);
-				Toast.makeText(getBaseContext(), "Copied to the clipboard", Toast.LENGTH_LONG).show();
 			}
-			
+			inflater = getLayoutInflater();
+			layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
+			tvToast = (TextView) layout.findViewById(R.id.tvToast);
+			iv = (ImageView) layout.findViewById(R.id.ivToast);
+			tvToast.setTextSize(20);
+			tvToast.setText("Program Copied To The Clipboard!");
+			Toast myToast = new Toast(getApplicationContext());
+			myToast.setGravity(Gravity.BOTTOM, 0, 100);
+			myToast.setDuration(Toast.LENGTH_LONG);
+			myToast.setView(layout);
+			myToast.show();
 		}
 		else if(v.getId() == R.id.btnOutput){
 			programOutput();
