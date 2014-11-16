@@ -29,7 +29,7 @@ public class Search extends ListActivity implements View.OnClickListener, TextWa
 	ArrayAdapter<String> adapter;
 	ArrayList<String> filesArrayList;
 	Button btnSearch;
-	LinearLayout llSearch, llResults;
+	LinearLayout llSearch, llResults, llList;
 	TextWatcher tw1, tw2;
 	LayoutInflater inflater;
 	View layout;
@@ -46,9 +46,10 @@ public class Search extends ListActivity implements View.OnClickListener, TextWa
 		etSearch = (EditText) findViewById(R.id.etSearch);
 		llSearch = (LinearLayout) findViewById(R.id.llSearch);
 		llResults = (LinearLayout) findViewById(R.id.llResults);
+		llList = (LinearLayout) findViewById(R.id.llList);
 		getFileList();
 		l = getListView();
-		adapter = new ArrayAdapter<String>(Search.this, android.R.layout.simple_list_item_1, filesArrayList);
+		adapter = new ArrayAdapter<String>(Search.this, R.layout.simple_list_item_1, filesArrayList);
 		l.setAdapter(adapter);
 		etSearchMain.addTextChangedListener(this);
 		btnSearch.setOnClickListener(this);
@@ -100,7 +101,7 @@ public class Search extends ListActivity implements View.OnClickListener, TextWa
 		else{
 			llSearch.setVisibility(View.GONE);
 			llResults.setVisibility(View.VISIBLE);
-			l.setVisibility(View.VISIBLE);
+			llList.setVisibility(View.VISIBLE);
 			int num = adapter.getCount();
 			if(num == 0){
 				myToast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);

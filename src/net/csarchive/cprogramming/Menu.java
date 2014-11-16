@@ -26,7 +26,7 @@ public class Menu extends ListActivity implements View.OnClickListener{
 		btnMainMenu.setOnClickListener(this);
 		btnSaveAll.setOnClickListener(this);
 		l = getListView();
-		l.setAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_expandable_list_item_1, chapters));
+		l.setAdapter(new ArrayAdapter<String>(Menu.this, R.layout.simple_expandable_list_item_1, chapters));
 	}
 
 	@Override

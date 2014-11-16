@@ -7,8 +7,6 @@
     android:background="#198CFF"
     android:orientation="vertical" >
 
-    
-    
     <LinearLayout 
         android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
@@ -35,12 +33,19 @@
         android:text="@string/btnSaveAll" />
     
     </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="20dp"
+        android:background="#D1E8FF" >
 
     <ListView
         android:id="@android:id/list"
-        android:padding="20dp"
         android:layout_width="fill_parent"
-        android:background="#D1E8FF"
+        android:background="#198CFF"
         android:layout_height="fill_parent" />
+    
+    </LinearLayout>
 
 </LinearLayout>

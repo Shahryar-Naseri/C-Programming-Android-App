@@ -34,7 +34,7 @@ public class Structure extends ListActivity implements View.OnClickListener{
 		btnMainMenu.setOnClickListener(this);
 		getFileList();
 		l = getListView();
-		adapter = new ArrayAdapter<String>(Structure.this, android.R.layout.simple_list_item_1, items);
+		adapter = new ArrayAdapter<String>(Structure.this, R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);
 		etSearch = (EditText) findViewById(R.id.etSearch);
 		etSearch.addTextChangedListener(new TextWatcher() {

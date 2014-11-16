@@ -35,14 +35,22 @@
         android:ems="10" /> 
 
     </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/llList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="20dp"
+        android:background="#D1E8FF"
+        android:visibility="gone" >
 
     <ListView
         android:id="@android:id/list"
-        android:padding="20dp"
         android:layout_width="fill_parent"
-        android:background="#D1E8FF"
-        android:layout_height="fill_parent"
-        android:visibility="gone" />
+        android:background="#198CFF"
+        android:layout_height="fill_parent" />
+    
+    </LinearLayout>
     
     <LinearLayout
         android:id="@+id/llSearch"
@@ -51,8 +59,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical" >
-    
-        
     
     <TextView
         android:id="@+id/tvSearch"
