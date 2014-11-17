@@ -215,10 +215,10 @@ public class ArrayPrograms extends Activity implements View.OnClickListener{
 			}
 		inflater = getLayoutInflater();
 		layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
-		tv = (TextView) layout.findViewById(R.id.tvToast);
+		tvToast = (TextView) layout.findViewById(R.id.tvToast);
 		iv = (ImageView) layout.findViewById(R.id.ivToast);
-		tv.setTextSize(20);
-		tv.setText("This file saved in C Programs folder!");
+		tvToast.setTextSize(20);
+		tvToast.setText("This file saved in C Programs folder!");
 		Toast myToast = new Toast(getApplicationContext());
 		myToast.setGravity(Gravity.BOTTOM, 0, 100);
 		myToast.setDuration(Toast.LENGTH_LONG);
