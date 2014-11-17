@@ -63,7 +63,7 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 		btnSave.setOnClickListener(this);
 		btnOutput.setOnClickListener(this);
 	}
-
+	
 	private void openFile() {
 		// Using AssetManager and InputStream to open file selected by the user.
 		Bundle extras = getIntent().getExtras();
@@ -88,7 +88,7 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 		for(String key: green){
 			fontcolor(key, 0xFF458b00);
 		}
-		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "(", ")"};
+		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "FILE", "exit", "fopen", "fprintf", "fscanf", "fclose", "(", ")"};
 		for(String key: red){
 			fontcolor(key, 0xFFDD2626);
 		}
@@ -96,7 +96,7 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 		for(String key: orange){
 			fontcolor(key, 0xFFee7621);
 		}
-		String[] purple = {"int ", "float ", "char ", "signed ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+		String[] purple = {"int ", "float ", "char ", "signed ", "long ", "double ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
 		for(String key: purple){
 			fontcolor(key, 0xFFc133a4);
 		}
@@ -215,10 +215,10 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 			}
 		inflater = getLayoutInflater();
 		layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
-		tv = (TextView) layout.findViewById(R.id.tvToast);
+		tvToast = (TextView) layout.findViewById(R.id.tvToast);
 		iv = (ImageView) layout.findViewById(R.id.ivToast);
-		tv.setTextSize(20);
-		tv.setText("This file saved in C Programs folder!");
+		tvToast.setTextSize(20);
+		tvToast.setText("This file saved in C Programs folder!");
 		Toast myToast = new Toast(getApplicationContext());
 		myToast.setGravity(Gravity.BOTTOM, 0, 100);
 		myToast.setDuration(Toast.LENGTH_LONG);

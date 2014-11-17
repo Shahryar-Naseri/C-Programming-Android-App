@@ -88,7 +88,7 @@ public class PointerPrograms extends Activity implements View.OnClickListener{
 		for(String key: green){
 			fontcolor(key, 0xFF458b00);
 		}
-		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "(", ")"};
+		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "FILE", "exit", "fopen", "fprintf", "fscanf", "fclose", "(", ")"};
 		for(String key: red){
 			fontcolor(key, 0xFFDD2626);
 		}
@@ -96,7 +96,7 @@ public class PointerPrograms extends Activity implements View.OnClickListener{
 		for(String key: orange){
 			fontcolor(key, 0xFFee7621);
 		}
-		String[] purple = {"int ", "float ", "char ", "signed ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+		String[] purple = {"int ", "float ", "char ", "signed ", "long ", "double ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
 		for(String key: purple){
 			fontcolor(key, 0xFFc133a4);
 		}
