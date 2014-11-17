@@ -1,20 +1,25 @@
 package net.csarchive.cprogramming;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-
+import java.io.OutputStream;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
+import android.text.style.ForegroundColorSpan;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -26,35 +31,36 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class IfElsePrograms extends Activity implements View.OnClickListener{
 	
 	TextView tv, tvToast;
-	Button btnIncrease, btnDecrease, btnCopy, btnFontColor, btnOutput;
+	Button btnIncrease, btnDecrease, btnCopy, btnSave, btnOutput;
 	ImageButton btnShare;
 	LayoutInflater inflater;
 	View layout;
 	ImageView iv;
-
+	Spannable raw;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.display);
 		tv = (TextView) findViewById(R.id.tvDisplay);
 		tv.setMovementMethod(new ScrollingMovementMethod());
-		openFile();
 		tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimension(R.dimen.textsize3));
+		openFile();
+		syntaxHighlight();
 		btnIncrease = (Button) findViewById(R.id.btnIncrease);
 		btnDecrease = (Button) findViewById(R.id.btnDecrease);
 		btnShare = (ImageButton) findViewById(R.id.btnShare);
 		btnCopy = (Button) findViewById(R.id.btnCopy);
-		btnFontColor = (Button) findViewById(R.id.btnFontColor);
+		btnSave = (Button) findViewById(R.id.btnSave);
 		btnOutput = (Button) findViewById(R.id.btnOutput);
 		btnIncrease.setOnClickListener(this);
 		btnDecrease.setOnClickListener(this);
 		btnShare.setOnClickListener(this);
 		btnCopy.setOnClickListener(this);
-		btnFontColor.setOnClickListener(this);
+		btnSave.setOnClickListener(this);
 		btnOutput.setOnClickListener(this);
 	}
 
@@ -63,20 +69,6 @@ public class IfElsePrograms extends Activity implements View.OnClickListener{
 		Bundle extras = getIntent().getExtras();
 		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
-		ArrayList<String> filesArrayList = new ArrayList<String>();
-		String[] filelist;
-		try {
-			filelist = am.list("If Else");
-			for(String name: filelist){
-				filesArrayList.add(name);
-			}
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		String[] items = new String[filesArrayList.size()];
-		filesArrayList.toArray(items);
-		
 		try {
 			InputStream is = am.open("If Else/" + temp + ".c");
 			int size = is.available();
@@ -90,49 +82,56 @@ public class IfElsePrograms extends Activity implements View.OnClickListener{
 		}
 	}
 	
-	private void fontColor() {
-		// Create a dialog to allow user changes the font color.
-		final CharSequence[] colors = {"Blue", "Red", "Green", "Default"};
-		final int defaultColor = tv.getCurrentTextColor();
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Please select a color");
-		builder.setIcon(R.drawable.c);
-		builder.setPositiveButton("OK", null);
-		builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				tv.setTextColor(defaultColor);
-			}
-		});
-		builder.setSingleChoiceItems(colors, -1, new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				if(colors[which].equals("Blue")){
-					tv.setTextColor(Color.BLUE);
-				}
-				else if(colors[which].equals("Red")){
-					tv.setTextColor(Color.RED);
-				}
-				else if(colors[which].equals("Green")){
-					tv.setTextColor(Color.GREEN);
-				}
-				else{
-					tv.setTextColor(Color.BLACK);
-				}
-			}
-		});
-		AlertDialog alert = builder.create();
-		alert.show();
+	private void syntaxHighlight() {
+		String [] green = {"#define", "#include<stdio.h>", "#include<conio.h>", "#include<stdlib.h>", "#include<math.h>", 
+				"#include<graphics.h>", "#include<string.h>", "#include<malloc.h>", "#include<time.h>", "#include<ctype.h>"};
+		for(String key: green){
+			fontcolor(key, 0xFF458b00);
+		}
+		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "(", ")"};
+		for(String key: red){
+			fontcolor(key, 0xFFDD2626);
+		}
+		String [] orange = {"main()", "getch()", "void"};
+		for(String key: orange){
+			fontcolor(key, 0xFFee7621);
+		}
+		String[] purple = {"int ", "float ", "char ", "signed ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+		for(String key: purple){
+			fontcolor(key, 0xFFc133a4);
+		}
+		printColor();
+		commentColor();
 	}
 	
-	private void programOutput() {
-		Bundle extras = getIntent().getExtras();
-		String temp = "If Else output/" + extras.getString("KEY");
-		Intent i = new Intent(IfElsePrograms.this, Output.class);
-		i.putExtra("KEY", temp);
-		startActivity(i);
+	private void printColor() {
+		raw = new SpannableString(tv.getText());
+		int index1 =TextUtils.indexOf(raw, '"');
+		int index2 = TextUtils.indexOf(raw, '"', index1+1);
+		while(index1 >= 0){
+			raw.setSpan(new ForegroundColorSpan(Color.BLUE), index1, index2+1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+			index1 = TextUtils.indexOf(raw, '"', index2+1);
+			index2 = TextUtils.indexOf(raw, '"', index1+1);
+		}
+		tv.setText(raw);
+	}
+
+	private void fontcolor(String key, int color) {
+		raw = new SpannableString(tv.getText());
+	    int index = TextUtils.indexOf(raw, key);
+	    while (index >= 0) 
+	    {
+	      raw.setSpan(new ForegroundColorSpan(color), index, index + key.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+	      index=TextUtils.indexOf(raw, key, index + key.length());
+	    }
+	    tv.setText(raw);
+	}
+	
+	private void commentColor() {
+		raw = new SpannableString(tv.getText());
+		int index=TextUtils.indexOf(raw, "*/");
+		raw.setSpan(new ForegroundColorSpan(Color.parseColor("#198CFF")), 0, index+2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		tv.setText(raw);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -174,13 +173,65 @@ public class IfElsePrograms extends Activity implements View.OnClickListener{
 			myToast.setGravity(Gravity.BOTTOM, 0, 100);
 			myToast.setDuration(Toast.LENGTH_LONG);
 			myToast.setView(layout);
-			myToast.show();
+			myToast.show();	
 		}
 		else if(v.getId() == R.id.btnOutput){
 			programOutput();
 		}
 		else{
-			fontColor();
+			saveProgram();
+		}
+	}
+	
+	private void programOutput() {
+		Bundle extras = getIntent().getExtras();
+		String temp = "If Else output/" + extras.getString("KEY");
+		Intent i = new Intent(IfElsePrograms.this, Output.class);
+		i.putExtra("KEY", temp);
+		startActivity(i);
+	}
+
+	private void saveProgram() {
+		Bundle extras = getIntent().getExtras();
+		String temp = extras.getString("KEY");
+		AssetManager am = getAssets();
+		String newFolder = "/C Programs";
+	    String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
+	    File myNewFolder = new File(extStorageDirectory + newFolder);
+	    myNewFolder.mkdir();
+	    InputStream is = null;
+		OutputStream os = null;
+		try {
+				is = am.open("If Else/" + temp + ".c");
+				os = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/C Programs/" + temp + ".c");
+				copyFiles(is, os);
+				is.close();
+				is = null;
+				os.flush();
+				os.close();
+				os = null;
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		inflater = getLayoutInflater();
+		layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.llToast));
+		tv = (TextView) layout.findViewById(R.id.tvToast);
+		iv = (ImageView) layout.findViewById(R.id.ivToast);
+		tv.setTextSize(20);
+		tv.setText("This file saved in C Programs folder!");
+		Toast myToast = new Toast(getApplicationContext());
+		myToast.setGravity(Gravity.BOTTOM, 0, 100);
+		myToast.setDuration(Toast.LENGTH_LONG);
+		myToast.setView(layout);
+		myToast.show();
+	}
+
+	private void copyFiles(InputStream is, OutputStream os) throws IOException {
+		// Create buffer to write programs in the SD card.
+		byte[] buffer = new byte[1024];
+		int read;
+		while((read = is.read(buffer)) != -1){
+			os.write(buffer, 0, read);
 		}
 	}
 }

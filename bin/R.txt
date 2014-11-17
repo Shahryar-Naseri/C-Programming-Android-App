@@ -361,11 +361,11 @@ int id btnContact 0x7f09005b
 int id btnCopy 0x7f090051
 int id btnDecrease 0x7f09004f
 int id btnExit 0x7f09005d
-int id btnFontColor 0x7f090053
 int id btnIncrease 0x7f09004d
 int id btnMainMenu 0x7f090054
 int id btnOutput 0x7f090052
 int id btnProgramsList 0x7f090055
+int id btnSave 0x7f090053
 int id btnSaveAll 0x7f090059
 int id btnSearch 0x7f09005a
 int id btnSend 0x7f09004c
@@ -512,6 +512,7 @@ int string btnIncrease 0x7f0a0018
 int string btnMainMenu 0x7f0a002a
 int string btnOutput 0x7f0a002d
 int string btnProgramsList 0x7f0a0011
+int string btnSave 0x7f0a0032
 int string btnSaveAll 0x7f0a0013
 int string btnSearch 0x7f0a002f
 int string btnSend 0x7f0a0025

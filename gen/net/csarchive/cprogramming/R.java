@@ -1663,11 +1663,11 @@ containing a value of this type.
         public static final int btnCopy=0x7f090051;
         public static final int btnDecrease=0x7f09004f;
         public static final int btnExit=0x7f09005d;
-        public static final int btnFontColor=0x7f090053;
         public static final int btnIncrease=0x7f09004d;
         public static final int btnMainMenu=0x7f090054;
         public static final int btnOutput=0x7f090052;
         public static final int btnProgramsList=0x7f090055;
+        public static final int btnSave=0x7f090053;
         public static final int btnSaveAll=0x7f090059;
         public static final int btnSearch=0x7f09005a;
         public static final int btnSend=0x7f09004c;
@@ -1882,6 +1882,7 @@ containing a value of this type.
         public static final int btnMainMenu=0x7f0a002a;
         public static final int btnOutput=0x7f0a002d;
         public static final int btnProgramsList=0x7f0a0011;
+        public static final int btnSave=0x7f0a0032;
         public static final int btnSaveAll=0x7f0a0013;
         public static final int btnSearch=0x7f0a002f;
         public static final int btnSend=0x7f0a0025;
