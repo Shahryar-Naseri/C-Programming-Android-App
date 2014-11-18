@@ -82,26 +82,54 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 		}
 	}
 	
-	private void syntaxHighlight() {
+    private void syntaxHighlight() {
+		
 		String [] green = {"#define", "#include<stdio.h>", "#include<conio.h>", "#include<stdlib.h>", "#include<math.h>", 
 				"#include<graphics.h>", "#include<string.h>", "#include<malloc.h>", "#include<time.h>", "#include<ctype.h>"};
 		for(String key: green){
 			fontcolor(key, 0xFF458b00);
 		}
-		String [] red = {"printf", "scanf", "if", "else", "for", "while", "do", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "FILE", "exit", "fopen", "fprintf", "fscanf", "fclose", "(", ")"};
+		
+		doColor();
+		
+		String[] purple = {"int", "float", "char", "signed", "long", "double", "NULL", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+		for(String key: purple){
+			fontcolor(key, 0xFFc133a4);
+		}
+		
+		String [] red = {"printf", "scanf", "if", "else", "for", "while", "switch", "case", "break", "default", "goto", "typedef", "struct", "return", "FILE", "exit", "fopen", "fprintf", "fscanf", "fclose", "(", ")"};
 		for(String key: red){
 			fontcolor(key, 0xFFDD2626);
 		}
+		
 		String [] orange = {"main()", "getch()", "void"};
 		for(String key: orange){
 			fontcolor(key, 0xFFee7621);
 		}
-		String[] purple = {"int ", "float ", "char ", "signed ", "long ", "double ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
-		for(String key: purple){
-			fontcolor(key, 0xFFc133a4);
-		}
+		
 		printColor();
 		commentColor();
+	}
+	
+	private void fontcolor(String key, int color) {
+		raw = new SpannableString(tv.getText());
+	    int index = TextUtils.indexOf(raw, key);
+	    while (index >= 0) 
+	    {
+	      raw.setSpan(new ForegroundColorSpan(color), index, index + key.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+	      index=TextUtils.indexOf(raw, key, index + key.length());
+	    }
+	    tv.setText(raw);
+	}
+	
+	private void doColor() {
+		raw = new SpannableString(tv.getText());
+	    int index = TextUtils.indexOf(raw, "do");
+	    while(index >= 0){
+	    	raw.setSpan(new ForegroundColorSpan(Color.parseColor("#DD2626")), index, index + 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+	    	index=TextUtils.indexOf(raw, "do", index + 2);
+	    }
+	    tv.setText(raw);
 	}
 	
 	private void printColor() {
@@ -116,17 +144,6 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 		tv.setText(raw);
 	}
 
-	private void fontcolor(String key, int color) {
-		raw = new SpannableString(tv.getText());
-	    int index = TextUtils.indexOf(raw, key);
-	    while (index >= 0) 
-	    {
-	      raw.setSpan(new ForegroundColorSpan(color), index, index + key.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-	      index=TextUtils.indexOf(raw, key, index + key.length());
-	    }
-	    tv.setText(raw);
-	}
-	
 	private void commentColor() {
 		raw = new SpannableString(tv.getText());
 		int index=TextUtils.indexOf(raw, "*/");
