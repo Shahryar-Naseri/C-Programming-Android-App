@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.Spannable;
@@ -34,6 +35,7 @@ import android.widget.Toast;
 public class IfElsePrograms extends Activity implements View.OnClickListener{
 	
 	TextView tv, tvToast;
+	Typeface face;
 	Button btnIncrease, btnDecrease, btnCopy, btnSave, btnOutput;
 	ImageButton btnShare;
 	LayoutInflater inflater;
@@ -46,8 +48,10 @@ public class IfElsePrograms extends Activity implements View.OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.display);
 		tv = (TextView) findViewById(R.id.tvDisplay);
+		face = Typeface.createFromAsset(getAssets(), "Fonts/Consolas.ttf");
 		tv.setMovementMethod(new ScrollingMovementMethod());
 		tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimension(R.dimen.textsize3));
+		tv.setTypeface(face);
 		openFile();
 		syntaxHighlight();
 		btnIncrease = (Button) findViewById(R.id.btnIncrease);
