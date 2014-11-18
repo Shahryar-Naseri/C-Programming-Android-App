@@ -70,7 +70,7 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
 		try {
-			InputStream is = am.open("Area/" + temp + ".c");
+			InputStream is = am.open("Programs/Area/" + temp + ".c");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);
@@ -202,7 +202,7 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 	
 	private void programOutput() {
 		Bundle extras = getIntent().getExtras();
-		String temp = "Area output/" + extras.getString("KEY");
+		String temp = "Programs/Area output/" + extras.getString("KEY");
 		Intent i = new Intent(AreaPrograms.this, Output.class);
 		i.putExtra("KEY", temp);
 		startActivity(i);
@@ -219,7 +219,7 @@ public class AreaPrograms extends Activity implements View.OnClickListener{
 	    InputStream is = null;
 		OutputStream os = null;
 		try {
-				is = am.open("Area/" + temp + ".c");
+				is = am.open("Programs/Area/" + temp + ".c");
 				os = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/C Programs/" + temp + ".c");
 				copyFiles(is, os);
 				is.close();

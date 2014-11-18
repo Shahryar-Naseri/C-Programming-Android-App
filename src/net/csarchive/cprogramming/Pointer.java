@@ -59,7 +59,7 @@ public class Pointer extends ListActivity implements View.OnClickListener{
 		final AssetManager assetManager = getAssets();
 		String[] filelist;
 		try {
-			filelist = assetManager.list("Pointer");
+			filelist = assetManager.list("Programs/Pointer");
 			for(String name: filelist){
 				name = name.substring(0, name.length() - 2);
 				filesArrayList.add(name);

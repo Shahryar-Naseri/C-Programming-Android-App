@@ -70,7 +70,7 @@ public class StructurePrograms extends Activity implements View.OnClickListener{
 		String temp = extras.getString("KEY");
 		final AssetManager am = getAssets();
 		try {
-			InputStream is = am.open("Structure/" + temp + ".c");
+			InputStream is = am.open("Programs/Structure/" + temp + ".c");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);
@@ -202,7 +202,7 @@ public class StructurePrograms extends Activity implements View.OnClickListener{
 	
 	private void programOutput() {
 		Bundle extras = getIntent().getExtras();
-		String temp = "Structure output/" + extras.getString("KEY");
+		String temp = "Programs/Structure output/" + extras.getString("KEY");
 		Intent i = new Intent(StructurePrograms.this, Output.class);
 		i.putExtra("KEY", temp);
 		startActivity(i);
@@ -219,7 +219,7 @@ public class StructurePrograms extends Activity implements View.OnClickListener{
 	    InputStream is = null;
 		OutputStream os = null;
 		try {
-				is = am.open("Structure/" + temp + ".c");
+				is = am.open("Programs/Structure/" + temp + ".c");
 				os = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/C Programs/" + temp + ".c");
 				copyFiles(is, os);
 				is.close();

@@ -59,7 +59,7 @@ public class Structure extends ListActivity implements View.OnClickListener{
 		final AssetManager assetManager = getAssets();
 		String[] filelist;
 		try {
-			filelist = assetManager.list("Structure");
+			filelist = assetManager.list("Programs/Structure");
 			for(String name: filelist){
 				name = name.substring(0, name.length() - 2);
 				filesArrayList.add(name);
