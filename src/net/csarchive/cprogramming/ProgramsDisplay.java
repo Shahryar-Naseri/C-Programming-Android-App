@@ -32,7 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LinkedListPrograms extends Activity implements View.OnClickListener{
+public class ProgramsDisplay extends Activity implements View.OnClickListener{
 	
 	TextView tv, tvToast;
 	Typeface face;
@@ -42,6 +42,7 @@ public class LinkedListPrograms extends Activity implements View.OnClickListener
 	View layout;
 	ImageView iv;
 	Spannable raw;
+	String temp, loc;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,14 +68,15 @@ public class LinkedListPrograms extends Activity implements View.OnClickListener
 		btnSave.setOnClickListener(this);
 		btnOutput.setOnClickListener(this);
 	}
-
+	
 	private void openFile() {
 		// Using AssetManager and InputStream to open file selected by the user.
 		Bundle extras = getIntent().getExtras();
-		String temp = extras.getString("KEY");
+		temp = extras.getString("KEY");
+		loc = extras.getString("LOC");
 		final AssetManager am = getAssets();
 		try {
-			InputStream is = am.open("Programs/Linkedlist/" + temp + ".c");
+			InputStream is = am.open("Programs/" + loc + "/" + temp + ".c");
 			int size = is.available();
 			byte[] buffer = new byte[size];
 			is.read(buffer);
@@ -86,7 +88,7 @@ public class LinkedListPrograms extends Activity implements View.OnClickListener
 		}
 	}
 	
-    private void syntaxHighlight() {
+	private void syntaxHighlight() {
 		
 		String [] green = {"#define", "#include<stdio.h>", "#include<conio.h>", "#include<stdlib.h>", "#include<math.h>", 
 				"#include<graphics.h>", "#include<string.h>", "#include<malloc.h>", "#include<time.h>", "#include<ctype.h>"};
@@ -205,16 +207,13 @@ public class LinkedListPrograms extends Activity implements View.OnClickListener
 	}
 	
 	private void programOutput() {
-		Bundle extras = getIntent().getExtras();
-		String temp = "Programs/Linkedlist output/" + extras.getString("KEY");
-		Intent i = new Intent(LinkedListPrograms.this, Output.class);
-		i.putExtra("KEY", temp);
+		String out = "Programs/" + loc + " output/" + temp;
+		Intent i = new Intent(ProgramsDisplay.this, Output.class);
+		i.putExtra("KEY", out);
 		startActivity(i);
 	}
 
 	private void saveProgram() {
-		Bundle extras = getIntent().getExtras();
-		String temp = extras.getString("KEY");
 		AssetManager am = getAssets();
 		String newFolder = "/C Programs";
 	    String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
@@ -223,7 +222,7 @@ public class LinkedListPrograms extends Activity implements View.OnClickListener
 	    InputStream is = null;
 		OutputStream os = null;
 		try {
-				is = am.open("Programs/Linkedlist/" + temp + ".c");
+				is = am.open("Programs/" + loc + "/" + temp + ".c");
 				os = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/C Programs/" + temp + ".c");
 				copyFiles(is, os);
 				is.close();

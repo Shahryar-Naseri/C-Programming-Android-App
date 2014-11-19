@@ -15,13 +15,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class Area extends ListActivity implements View.OnClickListener{
+public class ProgramsList extends ListActivity implements View.OnClickListener{
 	
 	String[] items;
 	ListView l;
 	EditText etSearch;
 	Button btnProgramsList, btnMainMenu;
 	ArrayAdapter<String> adapter;
+	String temp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class Area extends ListActivity implements View.OnClickListener{
 		btnMainMenu.setOnClickListener(this);
 		getFileList();
 		l = getListView();
-		adapter = new ArrayAdapter<String>(Area.this, R.layout.simple_list_item_1, items);
+		adapter = new ArrayAdapter<String>(ProgramsList.this, R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);
 		etSearch = (EditText) findViewById(R.id.etSearch);
 		etSearch.addTextChangedListener(new TextWatcher() {
@@ -55,11 +56,13 @@ public class Area extends ListActivity implements View.OnClickListener{
 
 	private void getFileList() {
 		// Create an ArrayList to store all files' name inside assets\All folder.
+		Bundle extras = getIntent().getExtras();
+		temp = extras.getString("KEY");
 		ArrayList<String> filesArrayList = new ArrayList<String>();
 		final AssetManager assetManager = getAssets();
 		String[] filelist;
 		try {
-			filelist = assetManager.list("Programs/Area");
+			filelist = assetManager.list("Programs/" + temp);
 			for(String name: filelist){
 				name = name.substring(0, name.length() - 2);
 				filesArrayList.add(name);
@@ -76,8 +79,9 @@ public class Area extends ListActivity implements View.OnClickListener{
 		// Send item position as an integer to AllPrograms activity.
 		super.onListItemClick(l, v, position, id);
 		String str = adapter.getItem(position);
-		Intent i = new Intent(Area.this, AreaPrograms.class);
+		Intent i = new Intent(ProgramsList.this, ProgramsDisplay.class);
 		i.putExtra("KEY", str);
+		i.putExtra("LOC", temp);
 		startActivity(i);
 	}
 
