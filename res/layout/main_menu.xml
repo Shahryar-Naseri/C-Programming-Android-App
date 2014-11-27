@@ -16,29 +16,30 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="#D1E8FF"
+        android:background="#ec2e4a"
         android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_view_as_list"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:padding="10dp"
         android:text="@string/btnProgramsList" />
-
-    <Button
-        android:id="@+id/btnViewAll"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnProgramsList"
-        android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
-        android:textSize="20sp"
-        android:text="@string/btnViewAll" />
     
     <Button
         android:id="@+id/btnSaveAll"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnViewAll"
+        android:layout_below="@+id/btnProgramsList"
         android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
-        android:textSize="20sp"
-        android:text="@string/btnSaveAll" />
+        android:background="#9933cc"
+        android:drawableLeft="@drawable/ic_action_save"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:gravity="left|center"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
+        android:text="@string/btnSaveAll"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
     
     <Button
         android:id="@+id/btnSearch"
@@ -46,8 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSaveAll"
         android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
+        android:background="#ff8800"
         android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
         android:text="@string/btnSearch" />
 
     <Button
@@ -56,8 +63,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSearch"
         android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
+        android:background="#99cc00"
         android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
         android:text="@string/btnContact" />
     
     <Button
@@ -66,8 +79,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnContact"
         android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
+        android:background="#00c5f9"
         android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_about"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
         android:text="@string/btnAbout" />
     
     <Button
@@ -76,8 +95,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnAbout"
         android:layout_marginTop="16dp"
-        android:background="#D1E8FF"
+        android:background="#00308f"
         android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_cancel"
+        android:drawableRight="@drawable/ic_action_next_item"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
         android:text="@string/btnExit" />
 
 </RelativeLayout>

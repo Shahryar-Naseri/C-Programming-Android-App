@@ -17,9 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:background="#D1E8FF"
+            android:background="#324065"
+            android:textColor="#ffffff"
             android:text="@string/btnIncrease"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_weight="1" />
         
@@ -31,7 +32,7 @@
             android:layout_weight="4"
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
-            android:background="#D1E8FF"
+            android:background="#00308f"
             android:contentDescription="@string/btnShare" />
 
         <Button
@@ -39,9 +40,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:background="#D1E8FF"
+            android:background="#324065"
+            android:textColor="#ffffff"
             android:text="@string/btnDecrease"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_weight="1" />
 
@@ -63,38 +65,41 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCopy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:background="#D1E8FF"
-        android:padding="5dp"
+        android:background="#9933cc"
+        android:padding="8dp"
         android:layout_weight="1"
         android:layout_marginRight="2dp"
-        android:text="@string/btnCopy" />
+        android:src="@drawable/ic_action_copy"
+        android:contentDescription="@string/btnCopy" />
     
      <Button
         android:id="@+id/btnOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:background="#D1E8FF"
+        android:background="#00308f"
+        android:textColor="#ffffff"
         android:padding="5dp"
         android:layout_weight="1"
         android:layout_marginRight="1dp"
         android:layout_marginLeft="1dp"
         android:text="@string/btnOutput" />
     
-    <Button 
+    <ImageButton 
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
         android:textSize="16sp"
-        android:background="#D1E8FF"
-        android:text="@string/btnSave"
-        android:padding="5dp"
+        android:background="#9933cc"
+        android:padding="8dp"
+        android:src="@drawable/ic_action_save"
+        android:contentDescription="@string/btnSave"
         android:layout_weight="1" />
      
     </LinearLayout>

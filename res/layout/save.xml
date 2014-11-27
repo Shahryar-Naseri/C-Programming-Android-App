@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tvSave"
-        android:background="#D1E8FF"
+        android:background="#9933cc"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:text="@string/btnSaveAll" />
 

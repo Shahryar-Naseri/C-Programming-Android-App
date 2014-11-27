@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ProgramsList extends ListActivity implements View.OnClickListener{
 	
@@ -23,6 +24,7 @@ public class ProgramsList extends ListActivity implements View.OnClickListener{
 	Button btnProgramsList, btnMainMenu;
 	ArrayAdapter<String> adapter;
 	String temp;
+	TextView tvListTitle;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +33,11 @@ public class ProgramsList extends ListActivity implements View.OnClickListener{
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		btnProgramsList = (Button) findViewById(R.id.btnProgramsList);
 		btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
+		tvListTitle = (TextView) findViewById(R.id.tvListTitle);
 		btnProgramsList.setOnClickListener(this);
 		btnMainMenu.setOnClickListener(this);
 		getFileList();
+		tvListTitle.setText(temp + " Programs");
 		l = getListView();
 		adapter = new ArrayAdapter<String>(ProgramsList.this, R.layout.simple_list_item_1, items);
 		l.setAdapter(adapter);

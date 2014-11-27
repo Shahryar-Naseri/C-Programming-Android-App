@@ -3,4 +3,7 @@
     <issue id="DefaultLocale">
         <ignore path="src/net/csarchive/cprogramming/ArrayAdapter.java" />
     </issue>
+    <issue id="UnusedAttribute">
+        <ignore path="res/layout/simple_expandable_list_item_1.xml" />
+    </issue>
 </lint>

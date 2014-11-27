@@ -3,7 +3,7 @@
 
     <string name="app_name">C Programming</string>
     <string name="action_settings">Settings</string>
-    <string name="btnProgramsList">CATEGORIES</string>
+    <string name="btnProgramsList">PROGRAMS LIST</string>
     <string name="btnViewAll">VIEW ALL</string>
     <string name="btnSaveAll">SAVE ALL</string>
     <string name="btnContact">CONTACT</string>
@@ -28,7 +28,7 @@
     <string name="tvSave">Press the button below to save all the programs on your device\'s SD card.</string>
     <string name="ivSearch">Search</string>
     <string name="etSearch">Search this list</string>
-    <string name="btnMainMenu">MAIN MENU</string>
+    <string name="btnMainMenu">MENU</string>
     <string name="btnExit">EXIT</string>
     <string name="btnClose">CLOSE</string>
     <string name="btnOutput">OUTPUT</string>
@@ -37,5 +37,6 @@
     <string name="etSearchMain">Enter your search here</string>
     <string name="ivToast">Search Result</string>
     <string name="btnSave">SAVE</string>
+    <string name="programs">PROGRAMS</string>
 
 </resources>

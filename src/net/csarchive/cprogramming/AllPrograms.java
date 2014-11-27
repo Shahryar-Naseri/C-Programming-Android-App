@@ -36,8 +36,8 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 	
 	TextView tv, tvToast;
 	Typeface face;
-	Button btnIncrease, btnDecrease, btnCopy, btnSave, btnOutput;
-	ImageButton btnShare;
+	Button btnIncrease, btnDecrease, btnOutput;
+	ImageButton btnShare, btnCopy, btnSave;
 	LayoutInflater inflater;
 	View layout;
 	ImageView iv;
@@ -57,8 +57,8 @@ public class AllPrograms extends Activity implements View.OnClickListener{
 		btnIncrease = (Button) findViewById(R.id.btnIncrease);
 		btnDecrease = (Button) findViewById(R.id.btnDecrease);
 		btnShare = (ImageButton) findViewById(R.id.btnShare);
-		btnCopy = (Button) findViewById(R.id.btnCopy);
-		btnSave = (Button) findViewById(R.id.btnSave);
+		btnCopy = (ImageButton) findViewById(R.id.btnCopy);
+		btnSave = (ImageButton) findViewById(R.id.btnSave);
 		btnOutput = (Button) findViewById(R.id.btnOutput);
 		btnIncrease.setOnClickListener(this);
 		btnDecrease.setOnClickListener(this);

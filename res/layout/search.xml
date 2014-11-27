@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="#D1E8FF"
-        android:src="@drawable/ic_action_search" />
+        android:src="@drawable/ic_action_search_dark" />
 
     <EditText
         android:id="@+id/etSearch"
@@ -82,7 +82,7 @@
         android:layout_height="50dp"
         android:background="#D1E8FF"
         android:layout_marginBottom="19dp"
-        android:src="@drawable/ic_action_search" />
+        android:src="@drawable/ic_action_search_dark" />
 
     <EditText
         android:id="@+id/etSearchMain"
@@ -101,7 +101,9 @@
         android:id="@+id/btnSearch"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:background="#D1E8FF"
+        android:background="#ff8800"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
         android:text="@string/btnSearch" />
     
     </LinearLayout>

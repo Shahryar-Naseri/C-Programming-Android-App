@@ -1635,8 +1635,17 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int c=0x7f020033;
-        public static final int ic_action_search=0x7f020034;
-        public static final int ic_action_share=0x7f020035;
+        public static final int ic_action_about=0x7f020034;
+        public static final int ic_action_cancel=0x7f020035;
+        public static final int ic_action_copy=0x7f020036;
+        public static final int ic_action_email=0x7f020037;
+        public static final int ic_action_next_item=0x7f020038;
+        public static final int ic_action_save=0x7f020039;
+        public static final int ic_action_search=0x7f02003a;
+        public static final int ic_action_search_dark=0x7f02003b;
+        public static final int ic_action_share=0x7f02003c;
+        public static final int ic_action_view_as_list=0x7f02003d;
+        public static final int menu=0x7f02003e;
     }
     public static final class id {
         public static final int action_bar=0x7f090033;
@@ -1652,7 +1661,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090030;
         public static final int action_mode_bar_stub=0x7f09002f;
         public static final int action_mode_close_button=0x7f090022;
-        public static final int action_settings=0x7f09006c;
+        public static final int action_settings=0x7f09006d;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1672,7 +1681,7 @@ containing a value of this type.
         public static final int btnSearch=0x7f09005a;
         public static final int btnSend=0x7f09004c;
         public static final int btnShare=0x7f09004e;
-        public static final int btnViewAll=0x7f090058;
+        public static final int btnViewAll=0x7f090069;
         public static final int checkbox=0x7f09002b;
         public static final int collapseActionView=0x7f090015;
         public static final int decor_content_parent=0x7f090031;
@@ -1696,13 +1705,13 @@ containing a value of this type.
         public static final int image=0x7f090025;
         public static final int imageView1=0x7f090065;
         public static final int ivSearch=0x7f090056;
-        public static final int ivToast=0x7f09006a;
+        public static final int ivToast=0x7f09006b;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090027;
         public static final int llList=0x7f090062;
         public static final int llResults=0x7f090061;
         public static final int llSearch=0x7f090063;
-        public static final int llToast=0x7f090069;
+        public static final int llToast=0x7f09006a;
         public static final int middle=0x7f09001d;
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
@@ -1733,6 +1742,7 @@ containing a value of this type.
         public static final int tvEmail=0x7f090045;
         public static final int tvInfo=0x7f090042;
         public static final int tvIntro=0x7f090044;
+        public static final int tvListTitle=0x7f090058;
         public static final int tvMessage=0x7f09004a;
         public static final int tvName=0x7f090046;
         public static final int tvOutputDisplay=0x7f09005e;
@@ -1741,7 +1751,7 @@ containing a value of this type.
         public static final int tvSplashDesc=0x7f090068;
         public static final int tvSplashTitle=0x7f090067;
         public static final int tvSubject=0x7f090048;
-        public static final int tvToast=0x7f09006b;
+        public static final int tvToast=0x7f09006c;
         public static final int tvVersion=0x7f090041;
         public static final int up=0x7f090001;
         public static final int useLogo=0x7f090013;
@@ -1811,7 +1821,8 @@ containing a value of this type.
         public static final int simple_list_item_1=0x7f030021;
         public static final int splash=0x7f030022;
         public static final int support_simple_spinner_dropdown_item=0x7f030023;
-        public static final int toast=0x7f030024;
+        public static final int test=0x7f030024;
+        public static final int toast=0x7f030025;
     }
     public static final class menu {
         public static final int main_menu=0x7f0c0000;
@@ -1893,6 +1904,7 @@ containing a value of this type.
         public static final int etSearchMain=0x7f0a0030;
         public static final int ivSearch=0x7f0a0028;
         public static final int ivToast=0x7f0a0031;
+        public static final int programs=0x7f0a0033;
         public static final int tvCreate=0x7f0a001e;
         public static final int tvEmail=0x7f0a0021;
         public static final int tvInfo=0x7f0a001f;

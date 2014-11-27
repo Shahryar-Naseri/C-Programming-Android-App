@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import android.app.Activity;
 import android.content.res.AssetManager;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
@@ -41,7 +40,6 @@ public class Output extends Activity implements View.OnClickListener{
 			is.close();
 			String text = new  String(buffer);
 			tvOutput.setText(text);
-			tvOutput.setTextColor(Color.parseColor("#198CFF"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

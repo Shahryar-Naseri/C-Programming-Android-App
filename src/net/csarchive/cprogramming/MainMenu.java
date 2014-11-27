@@ -5,29 +5,38 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 
 
 public class MainMenu extends Activity implements View.OnClickListener{
 	
-
-	Button btnProgramsList, btnViewAll, btnSaveAll, btnSearch, btnContact, btnAbout, btnExit;
-
+	Button btnProgramsList, btnSaveAll, btnSearch, btnContact, btnAbout, btnExit;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
-        btnProgramsList = (Button) findViewById(R.id.btnProgramsList);
         btnContact = (Button) findViewById(R.id.btnContact);
-        btnViewAll = (Button) findViewById(R.id.btnViewAll);
+        btnProgramsList = (Button) findViewById(R.id.btnProgramsList);
         btnSaveAll = (Button) findViewById(R.id.btnSaveAll);
         btnSearch = (Button) findViewById(R.id.btnSearch);
         btnAbout = (Button) findViewById(R.id.btnAbout);
         btnExit = (Button) findViewById(R.id.btnExit);
+        Display display=getWindowManager().getDefaultDisplay();
+        @SuppressWarnings("deprecation")
+		int h = display.getHeight();
+        if(h >= 720){
+        	btnProgramsList.setPadding(10, 20, 10, 20);
+        	btnContact.setPadding(10, 20, 10, 20);
+        	btnSaveAll.setPadding(10, 20, 10, 20);
+        	btnSearch.setPadding(10, 20, 10, 20);
+        	btnAbout.setPadding(10, 20, 10, 20);
+        	btnExit.setPadding(10, 20, 10, 20);
+        }
         btnProgramsList.setOnClickListener(this);
-        btnViewAll.setOnClickListener(this);
-        btnContact.setOnClickListener(this);  
+        btnContact.setOnClickListener(this);
         btnSaveAll.setOnClickListener(this);
         btnSearch.setOnClickListener(this);
         btnAbout.setOnClickListener(this);
@@ -38,11 +47,7 @@ public class MainMenu extends Activity implements View.OnClickListener{
 	public void onClick(View v) {
 		// Defining onClickListener to open each activity using Intent.
 		if(v.getId() == R.id.btnProgramsList){
-			Intent c = new Intent("net.csarchive.cprogramming.Menu");
-			startActivity(c);
-		}
-		else if(v.getId() == R.id.btnViewAll){
-			Intent i = new Intent("net.csarchive.cprogramming.All");
+			Intent i = new Intent("net.csarchive.cprogramming.Menu");
 			startActivity(i);
 		}
 		else if(v.getId() == R.id.btnSaveAll){
@@ -68,7 +73,7 @@ public class MainMenu extends Activity implements View.OnClickListener{
 	
 	// Create a dialog to confirm user
 	public void onBackPressed(){
-		new AlertDialog.Builder(this).setMessage("Are you want to exit?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		new AlertDialog.Builder(this).setTitle("Programming").setIcon(R.drawable.c).setMessage("Are you want to exit?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {

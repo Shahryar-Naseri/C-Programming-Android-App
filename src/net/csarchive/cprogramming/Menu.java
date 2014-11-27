@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class Menu extends ListActivity implements View.OnClickListener{
 	
-	String[] chapters = {"All", "Area", "Array", "Conditional Operators", "Function", "If Else", "Library Functions", "Linked List", "Loop", "Others", "Pointer",  
+	String[] chapters = {"All", "Area", "Array", "Conditional Operators", "Function", "If Else", "Library Function", "Linked List", "Loop", "Other", "Pointer",  
 			"Recursion", "Simple", "String", "Structure", "Switch"};
 	ListView l;
 	Button btnMainMenu, btnSaveAll;

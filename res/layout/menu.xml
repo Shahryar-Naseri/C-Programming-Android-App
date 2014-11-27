@@ -19,17 +19,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#D1E8FF"
+        android:background="#00308f"
         android:layout_marginRight="2dp"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/menu"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
         android:text="@string/btnMainMenu" />
 
     <Button
         android:id="@+id/btnSaveAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#D1E8FF"
+        android:background="#9933cc"
         android:layout_marginLeft="2dp"
         android:layout_weight="1"
+        android:textColor="#ffffff"
+        android:gravity="left|center"
+        android:drawableLeft="@drawable/ic_action_save"
+        android:drawablePadding="5dp"
+        android:paddingLeft="10dp"
         android:text="@string/btnSaveAll" />
     
     </LinearLayout>
