@@ -1,0 +1,7 @@
+Enter upper-case character you want in triangle at last row: E
+
+A
+BB
+CCC
+DDDD
+EEEEE

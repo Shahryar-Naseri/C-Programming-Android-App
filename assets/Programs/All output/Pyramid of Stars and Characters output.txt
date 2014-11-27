@@ -1,0 +1,7 @@
+Enter the number of rows: 5
+
+    *
+   *A*
+  *A*A*
+ *A*A*A*
+*A*A*A*A*

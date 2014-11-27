@@ -1,0 +1,7 @@
+Enter the number of rows: 5
+
+54321
+4321
+321
+21
+1
